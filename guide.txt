@@ -1,0 +1,45 @@
+- IoT
+- web development
+- design
+- cyber security
+
+- presenting
+- organise
+- work with team
+- talk
+
+Incoming
+- mobile app
+- game dev
+
+technologies:
+DAY-TO-DAY COMFORT
+
+
+
+EXPERIENCE WITH
+
+
+-WordPress / PHP
+-Sass / LESS
+-HTML5 / CSS3
+-JavaScript / jQuery
+-Photoshop / Sketch
+-Version Control ( GIT )
+-Foundation / Bootstrap / Susy / Neat
+-Responsive Layout and Design
+-Agile Methodology
+-BEM Methodology (naming convention)
+-Cross-Browser Compatibility
+-Mobile First Thinking
+-Grunt
+-RequireJS
+-AJAX
+-Node.js (limited)
+-React.js (limited)
+-Backbone.js (limited)
+
+
+
+rujukan:
+https://www.devonstank.com/
