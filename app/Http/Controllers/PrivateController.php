@@ -10,6 +10,7 @@ use App\mnh_lookup_mst;
 use App\mnh_lookup_var;
 use App\mnh_quote;
 
+
 class PrivateController extends Controller
 {
     

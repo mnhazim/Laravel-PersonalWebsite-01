@@ -35,7 +35,6 @@
             <small style="font-family: bauhaus;font-size: 20px;">{{ $owner->position }}</small>
          </div>
       </div>
-      
       <div class="row align-items-end h-25">
          <div class="col-lg-4 mx-auto text-center text-white">
             <div class="font-italictext-white">
@@ -165,14 +164,14 @@
                   </div>
                   <div class="work-content ">
                      <div class="row">
-                           <div class="col-sm-12">
-                              <h2 class="w-title">{{ str_limit($listact->title) }}</h2>
-                              <div class="w-more">
-                                 <p>{{ str_limit($listact->desc) }}</p>
-                                 <span class="w-date">{{ \Carbon\Carbon::parse($listact->datepost)->diffForHumans() }}</span>
-                              </div>
+                        <div class="col-sm-12">
+                           <h2 class="w-title">{{ str_limit($listact->title) }}</h2>
+                           <div class="w-more">
+                              <p>{{ str_limit($listact->desc) }}</p>
+                              <span class="w-date">{{ \Carbon\Carbon::parse($listact->datepost)->diffForHumans() }}</span>
                            </div>
                         </div>
+                     </div>
                   </div>
                </a>
             </div>
@@ -208,25 +207,25 @@
          @foreach ($sharings as $listshare)
          <div class="col-lg-4" >
             <div class="work-box bg-transparent">
-                  <a href="/sharing/{{ $listshare->postid }}" data-lightbox="gallery-mf">
-                     <div class="work-img">
-                        @if($listshare->image != '')
+               <a href="/sharing/{{ $listshare->postid }}" data-lightbox="gallery-mf">
+                  <div class="work-img">
+                     @if($listshare->image != '')
                      <img src="{{ asset('images/' . $listshare->image) }}" alt="" class="img-fluid" width="100%">
                      @else
                      <img src="images/default.png" alt="" class="img-fluid" width="100%">
                      @endif
+                  </div>
+                  <div class="work-content">
+                     <div class="overflow-hidden">
+                        <small class="d-inline-block ls fw-500 mb-0 mt-3 color-6 ml-auto">{{ \Carbon\Carbon::parse($listshare->datepost)->diffForHumans() }}</small>
+                        <h5 class="mt-4" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">{{ str_limit($listshare->title) }}</h5>
                      </div>
-                     <div class="work-content">
-                        <div class="overflow-hidden">
-                  <small class="d-inline-block ls fw-500 mb-0 mt-3 color-6 ml-auto">{{ \Carbon\Carbon::parse($listshare->datepost)->diffForHumans() }}</small>
-                  <h5 class="mt-4" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">{{ str_limit($listshare->title) }}</h5>
-               </div>
-               <div class="overflow-hidden">
-                  <p style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">{{ str_limit($listshare->desc) }}</p>
-               </div>
+                     <div class="overflow-hidden">
+                        <p style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">{{ str_limit($listshare->desc) }}</p>
                      </div>
-                  </a>
-               </div>
+                  </div>
+               </a>
+            </div>
          </div>
          @endforeach
       </div>
@@ -246,7 +245,7 @@
             <div class="row h-100 align-items-center justify-content-center">
                <div class="col-sm-11 col-md-8 col-lg-10 col-xl-9 px-5">
                   <div class="mb-5 mb-lg-7 oveflow-hidden">
-                     <h2 style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">Hire me?</h2>
+                     <h2 style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">So, Collaborate Now?</h2>
                   </div>
                   <div class="media mb-5 card-service" >
                      <div class="oveflow-hidden">
@@ -257,7 +256,7 @@
                            <h5 class="mb-2" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">Final Year Project.</h5>
                         </div>
                         <div class="overflow-hidden">
-                           <p class="mb-0" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">Build project based on your requirement and scope; giving you basic and simple code for eazy to understand..</p>
+                           <p class="mb-0" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">Build project based on your requirement and scope; giving you basic and simple code for easy to understand.</p>
                         </div>
                      </div>
                   </div>
@@ -293,30 +292,53 @@
          <div class="col-lg-6 background-white py-6 py-lg-8">
             <div class="row h-100 align-items-center justify-content-center">
                <div class="col-sm-8 col-md-6 col-lg-12 col-xl-8" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+                  @if (Session::has('message'))
+                  <div class="alert alert-success">{{ Session::get('message') }}</div>
+                  @endif
+                  @if ($errors->any())
+                  <div class="alert alert-danger">
+                     <ul>
+                        @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                        @endforeach
+                     </ul>
+                  </div>
+                  @endif
                   <h3 class="lh-1 fs-2 fs-md-3">Perfect for Students,
                      <br>Beginner &amp; You.
                   </h3>
                   <h6 class="text-success mt-3">I will response within 3 working days. ok?</h6>
-                  <form class="mt-5">
+                  <form class="mt-5" method="post" action="{{ Route('formSubmit') }}">
+                     @csrf
                      <div class="row mb-4">
                         <div class="col">
-                           <input class="form-control" type="text" placeholder="Your Name"> 
+                           <input class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" type="text" placeholder="Your Name" name="name" value="{{ old('name') }}"> 
                         </div>
                      </div>
                      <div class="row mb-4">
                         <div class="col">
-                           <input class="form-control" type="email" placeholder="Email Address"> 
+                           <input class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" type="email" placeholder="Email Address" name="email" value="{{ old('email') }}"> 
                         </div>
                      </div>
                      <div class="row mb-4">
                         <div class="col">
-                           <textarea rows="4" class="form-control">What's up.?</textarea>
+                           <textarea rows="4" class="form-control{{ $errors->has('desc') ? ' is-invalid' : '' }}" name="desc">{{ old('desc') == '' ? 'Whats up ?' : old('desc') }}</textarea>
+                           <small class="text-danger">**180 Character Only</small>
                         </div>
                      </div>
                      <div class="row mb-4">
                         <div class="col">
-                           <label>CAPTCHA</label>
-                           <input class="form-control" type="email" placeholder="captcha"> 
+                           <label class="text-danger"><strong>Enter Captcha.</strong></label>
+                           <div class="d-flex col-md-6 captcha p-2">
+                              <span class="mr-2">{!! captcha_img() !!}</span>
+                              <button type="button" class="btn btn-sm btn-outline-dark" id="caprefresh"><span data-feather='refresh-ccw'></span></button>
+                           </div>
+                           <input type="text" id="captcha" class="form-control{{ $errors->has('captcha') ? ' is-invalid' : '' }}" placeholder="Enter Captcha" name ="captcha" required>
+                           @if ($errors->has('captcha'))
+                           <span class="invalid-feedback" role="alert">
+                           <strong>Input Wrong, Try again.</strong>
+                           </span>
+                           @endif
                         </div>
                      </div>
                      <div class="row mb-4">
@@ -326,7 +348,7 @@
                               <label class="custom-control-label" for="customSwitch1">Urgent and need fast response?</label>
                               </div> -->
                            <div class="custom-control custom-checkbox mr-sm-2">
-                              <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
+                              <input type="checkbox" class="custom-control-input" id="customControlAutosizing" name="urgent">
                               <label class="custom-control-label text-danger" for="customControlAutosizing">Urgent and need fast response?</label>
                            </div>
                         </div>

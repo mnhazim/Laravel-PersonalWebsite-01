@@ -140,4 +140,14 @@ jQuery(function ($) {
   $("#share").jsSocials({
 	    shares: ["email", "twitter", "facebook", "googleplus", "linkedin", "pinterest", "stumbleupon", "whatsapp"]
 	});
+
+  $('#caprefresh').click(function(){
+  	$.ajax({
+  		type: 'GET',
+  		url: '/refresh_captcha',
+  		success: function(data){
+  			$('.captcha span').html(data.captcha);
+  		}
+  	});
+  });
 });

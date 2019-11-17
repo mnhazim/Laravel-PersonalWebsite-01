@@ -30,6 +30,6 @@ class CreateMnhLookupVarTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('mnh_lookup_var');
+        
     }
 }

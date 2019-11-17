@@ -32,6 +32,10 @@ Route::get('/activity/{id}', 'ContentController@postActivity');
 Route::get('/sharing/', 'ContentController@sharing');
 Route::get('/sharing/{id}', 'ContentController@postsharing');
 
+//--------- Captcha/Form ---------
+Route::post('formSubmit', 'ContentController@formSubmit')->name('formSubmit');
+Route::get('refresh_captcha', 'ContentController@refreshCaptcha')->name('refresh_captcha');
+
 // END FOR PUBLIC
 
 //FOR AUTH

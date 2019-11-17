@@ -29,6 +29,6 @@ class CreateMnhQuotesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('mnh_quotes');
+        
     }
 }

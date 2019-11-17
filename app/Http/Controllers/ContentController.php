@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\mnh_lookup_var;
 use App\mnh_post;
+use App\mnh_form;
+use Illuminate\Support\Facades\Session;
 
 class ContentController extends Controller
 {
@@ -161,5 +163,30 @@ class ContentController extends Controller
             return 0;
         }
 
+    }
+
+    public function formSubmit(){
+
+        request()->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|min:10',
+            'desc' => 'required|string|max:180|min:10',
+            'captcha' => 'required|captcha'
+        ]);
+
+        $form = new mnh_form;
+        $form->name = Request('name');
+        $form->email = Request('email');
+        $form->desc = Request('desc');
+        $form->urgent = (Request('urgent') == '') ? 0 : 1 ;
+        $form->save();
+
+        Session::flash('message', "Thank you, I will response within 3 working days. ok?");
+        return back();
+        
+    }
+
+    public function refreshCaptcha(){
+        return response()->json(['captcha' => captcha_img()]);
     }
 }

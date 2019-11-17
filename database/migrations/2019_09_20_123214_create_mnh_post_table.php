@@ -36,6 +36,6 @@ class CreateMnhPostTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('mnh_post');
+        
     }
 }
