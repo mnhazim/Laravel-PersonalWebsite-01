@@ -1,4 +1,4 @@
-<!-- Nanti delete hurmm aku saje test github gui -->
+<!-- Nanti delete hurmm aku saje test github guia -->
 
 @extends('master_public.app')
 @section('content')
