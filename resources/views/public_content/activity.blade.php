@@ -1,3 +1,5 @@
+<!-- Nanti delete hurmm aku saje test github gui -->
+
 @extends('master_public.app')
 @section('content')
 <!-- 1 SECTION START -->
