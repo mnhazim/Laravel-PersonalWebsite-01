@@ -20,7 +20,7 @@
 </style>
 <section class="py-0" id="header-split-static">
    <div class="container-fluid">
-      <div class="row" style="height: 75vh">
+      <div class="row" style="height: 50vh">
          <div class="col-lg-6 px-0 order-lg-2">
             <div class="background-holder" style="background-image: url(/../images/{{ $detailSharing->image }}); filter: blur(0px); opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);" > </div>
          </div>
@@ -28,9 +28,11 @@
             <div class="row h-100 align-items-center justify-content-center">
                <div class="col-lg-10 py-6 py-lg-8">
                   <h1 class="fw-300 text-uppercase fs-2 fs-sm-4">
-                     <div class="overflow-hidden">
-                        <img src="{{ asset('images/icon/i_logoH.png') }}" width="50">
-                     </div>
+                     <a href="{{ Route('home') }}">
+                        <div class="overflow-hidden">
+                           <img src="{{ asset('images/icon/i_logoH.png') }}" width="50">
+                        </div>
+                     </a>
                      <div class="overflow-hidden">
                         <span class="d-block mt-2" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">{{ $detailSharing->title }}</span>
                      </div>
@@ -39,22 +41,10 @@
                      <h6 class="text-uppercase mt-4" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">{{ $detailSharing->second_title }}</h6>
                   </div>
                   <div style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-                     <a class="btn btn-danger btn-sm mt-5 mt-sm-7" href="#">Home</a>
+                     <a class="btn btn-outline-secondary btn-sm mt-1" href="{{ Route('home') }}">Home</a>
                   </div>
                </div>
             </div>
-         </div>
-      </div>
-      <!--/.row-->
-   </div>
-   <!--/.container-->
-</section>
-<section class="text-center" >
-   <div class="container">
-      <div class="row justify-content-center align-items-center" style="height: 25vh">
-         <div class="col-lg-7">
-            <p class="lead">{{ $detailSharing->desc }}
-            </p>
          </div>
       </div>
       <!--/.row-->
@@ -69,9 +59,9 @@
             @if(count($getSharing) > 0)
             @foreach($getSharing as $listSharing)
             <div class="mb-4 border-bottom">
-               <img class="d-block w-100 mb-2 radius-primary" src="{{ asset('images/bg1.jpg') }}" alt="" width="100%">
-               <a class="font-1 color-7" href="#">{{ Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $listSharing->created_at)->format('M d, Y') }}</a>
-               <a href="page--single-blog.html">
+               <img class="d-block w-100 mb-2 radius-primary" src="{{ asset('images/' . $listSharing->image) }}" alt="" width="100%">
+               <a class="font-1 color-7" href="/sharing/{{ $listSharing->id }}">{{ Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $listSharing->created_at)->format('M d, Y') }}</a>
+               <a href="/sharing/{{ $listSharing->id }}">
                   <h4>{{ $listSharing->title }}</h4>
                </a>
                <p class="mt-2">{{ $listSharing->desc }}
@@ -95,7 +85,7 @@
                      <h3 class="">Top Hits</h3>
                      @if(count($topHit) > 0)
                      @foreach($topHit as $listhit)
-                     <a href="page--single-blog.html">
+                     <a href="/sharing/{{ $listhit->id }}">
                         <img class="mt-3 radius-primary" src="{{ asset('images/' . $listhit->image) }}" width="100%" alt="">
                         <h6 class="fs-0 mt-3">{{ $listhit->title }}</h6>
                      </a>

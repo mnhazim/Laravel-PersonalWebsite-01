@@ -19,12 +19,12 @@
    }
 </style>
 <section class="py-0" id="header-split-static">
-   <div class="container-fluid">
-      <div class="row" style="height: 75vh">
-         <div class="col-lg-6 px-0 order-lg-2">
+   <div class="container-fluid animatedParent" data-sequence='800'>
+      <div class="row" style="height: 50vh">
+         <div class="col-lg-6 px-0 order-lg-2 animated fadeInLeftShort slowest" data-id='1'>
             <div class="background-holder" style="background-image: url(/../images/{{ $detailCategory->image }}); filter: blur(0px); opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);" > </div>
          </div>
-         <div class="col-lg-6">
+         <div class="col-lg-6 animated fadeInRightShort slowest" data-id='2'>
             <div class="row h-100 align-items-center justify-content-center">
                <div class="col-lg-10 py-6 py-lg-8">
                   <h1 class="fw-300 text-uppercase fs-2 fs-sm-4">
@@ -39,22 +39,10 @@
                      <h6 class="text-uppercase mt-4" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">{{ $detailCategory->secondtitle }}</h6>
                   </div>
                   <div style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-                     <a class="btn btn-danger btn-sm mt-5 mt-sm-7" href="#">Home</a>
+                     <a class="btn btn-outline-secondary btn-sm mt-1" href="{{ Route('home') }}">Home</a>
                   </div>
                </div>
             </div>
-         </div>
-      </div>
-      <!--/.row-->
-   </div>
-   <!--/.container-->
-</section>
-<section class="text-center" >
-   <div class="container">
-      <div class="row justify-content-center align-items-center" style="height: 25vh">
-         <div class="col-lg-7">
-            <p class="lead">{{ $detailCategory->desc }}
-            </p>
          </div>
       </div>
       <!--/.row-->
@@ -69,7 +57,7 @@
             @if(count($getCategory) > 0)
             @foreach($getCategory as $listcat)
             <div class="mb-4 border-bottom">
-               <img class="d-block w-100 mb-2 radius-primary" src="{{ asset('images/bg1.jpg') }}" alt="" width="100%">
+               <img class="d-block w-100 mb-2 radius-primary" src="{{ asset('images/' . $listcat->image) }}" alt="" width="100%">
                <a class="font-1 color-7" href="#">{{ Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $listcat->created_at)->format('M d, Y') }}</a>
                <a href="page--single-blog.html">
                   <h4>{{ $listcat->title }}</h4>
@@ -132,7 +120,7 @@
          </div>
          @foreach($randomCat as $ranlist)
          <div class="col-sm-6 col-lg-3" >
-            <a href="#">
+            <a href="/category/{{$ranlist->code . '/' . $ranlist->id}}">
                <img class="w-100 radius-primary" src="{{ asset('images/'. $ranlist->image) }}" width="100%" alt="" style="filter: blur(0px); opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
                <h6 class="d-inline-block ls fw-500 mb-0 mt-3 color-6">{{ $ranlist->typepost }}</h6>
                <h5>{{ $ranlist->title }}</h5>

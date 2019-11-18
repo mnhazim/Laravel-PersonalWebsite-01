@@ -17,7 +17,7 @@ Route::get('/dummy', function(){
 });
 
 // FOR PUBLIC
-Route::get('/', 'ContentController@index');
+Route::get('/', 'ContentController@index')->name('home');
 
 //--------- Category ---------
 //Route::get('/category', 'ContentController@mstCategory'); for display all category

@@ -7,6 +7,7 @@
    <!-- Favicons -->
    <link href="{{ asset('images/icon/i_logoH.png') }}" rel="icon">
    <!-- Bootstrap CSS File -->
+   <link rel="stylesheet" href="{{ asset('css/animations.css') }}">
    <link href="{{ asset('lib/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
    <!-- Libraries CSS Files -->
    <link href="{{ asset('lib/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
@@ -19,7 +20,7 @@
    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials.css" />
 
    
-   <link rel="stylesheet" href="{{ asset('lib/animate/animate.min.css') }}">
+   
    <!-- MNhazim Stylesheet File -->
    <link href="{{ asset('css/hazimstyle.css') }}" rel="stylesheet">
    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials-theme-flat.css" />

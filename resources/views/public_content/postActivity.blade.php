@@ -28,9 +28,11 @@
             <div class="row h-100 align-items-center justify-content-center">
                <div class="col-lg-10 py-6 py-lg-8">
                   <h1 class="fw-300 text-uppercase fs-2 fs-sm-4">
-                     <div class="overflow-hidden">
-                        <img src="{{ asset('images/icon/i_logoH.png') }}" width="50">
-                     </div>
+                     <a href="{{ Route('home') }}">
+                        <div class="overflow-hidden">
+                           <img src="{{ asset('images/icon/i_logoH.png') }}" width="50">
+                        </div>
+                     </a>
                      <div class="overflow-hidden">
                         <span class="d-block mt-2" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">{{ $detailActivity->title }}</span>
                      </div>
@@ -39,7 +41,7 @@
                      <h6 class="text-uppercase mt-4" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">{{ $detailActivity->second_title }}</h6>
                   </div>
                   <div style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-                     <a class="btn btn-danger btn-sm mt-5 mt-sm-7" href="#">Home</a>
+                     <a class="btn btn-outline-secondary btn-sm mt-1" href="{{ Route('home') }}">Home</a>
                   </div>
                </div>
             </div>

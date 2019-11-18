@@ -15,6 +15,7 @@
 <script src="{{ asset('lib/vanta-master/vendor/three.r92.min.js') }}"></script>
 <script src="{{ asset('lib/vanta-master/dist/vanta.net.min.js') }}"></script>
 <script src="{{ asset('lib/vanta-master/dist/vanta.birds.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/css3-animate-it.js') }}"></script>
 
 <script>
  VANTA.NET({

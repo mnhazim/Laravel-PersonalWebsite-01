@@ -9,6 +9,7 @@ use App\Mnh_post;
 use App\mnh_lookup_mst;
 use App\mnh_lookup_var;
 use App\mnh_quote;
+use App\mnh_form;
 
 
 class PrivateController extends Controller
@@ -228,7 +229,9 @@ class PrivateController extends Controller
 
     //form
     public function form(){
-    	return view('private_content.form');
+        $form = mnh_form::all();
+        
+    	return view('private_content.form', compact('form'));
     }
 
     //lookup

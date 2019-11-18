@@ -17,7 +17,7 @@ class ContentController extends Controller
         $quote = DB::table('mnh_quotes')->where('status', 1)->get();
         $owner = DB::table('mnh_owner')->first();
         $activity = DB::table('mnh_post')
-                        ->select(DB::raw('*,mnh_post.created_at as datepost,mnh_post.title as title, mnh_post.image as image, mnh_post.id as postid'))
+                        ->select(DB::raw('mnh_post.*,mnh_post.created_at as datepost,mnh_post.title as title, mnh_post.image as image, mnh_post.id as postid'))
                         ->leftJoin('mnh_lookup_var', 'mnh_post.id_var', '=', 'mnh_lookup_var.id')
                         ->where('mnh_lookup_var.id', 1)
                         ->orderBy('mnh_post.created_at', 'desc')
@@ -25,7 +25,7 @@ class ContentController extends Controller
                         ->get();
 
         $sharings = DB::table('mnh_post')
-                        ->select(DB::raw('*,mnh_post.created_at as datepost,mnh_post.title as title, mnh_post.image as image, mnh_post.id as postid'))
+                        ->select(DB::raw('mnh_post.*,mnh_post.created_at as datepost,mnh_post.title as title, mnh_post.image as image, mnh_post.id as postid'))
                         ->leftJoin('mnh_lookup_var', 'mnh_post.id_var', '=', 'mnh_lookup_var.id')
                         ->where('mnh_lookup_var.id', 2)
                         ->orderBy('mnh_post.created_at', 'desc')
@@ -33,7 +33,7 @@ class ContentController extends Controller
                         ->get();
                         
         $portfolios = DB::table('mnh_post')
-                        ->select(DB::raw('*,mnh_post.created_at as datepost'))
+                        ->select(DB::raw('mnh_post.*,mnh_post.created_at as datepost'))
                         ->leftJoin('mnh_lookup_var', 'mnh_post.id_var', '=', 'mnh_lookup_var.id')
                         ->where('mnh_lookup_var.id', 3)
                         ->orderBy('mnh_post.created_at', 'desc')
@@ -51,8 +51,7 @@ class ContentController extends Controller
     }
 
     public function category($code){
-        $detailCategory = mnh_lookup_var::
-                where('code', $code)->firstOrFail();
+        $detailCategory = mnh_lookup_var::where('code', $code)->firstOrFail();
 
         $getCategory = DB::table('mnh_post as a')
                 ->select(DB::raw('a.*, b.title as typepost'))
@@ -66,6 +65,16 @@ class ContentController extends Controller
         $listTagCat = $this->getLookupVar(array(4,5,6,7,8));
 
         return view('public_content.category' , compact('getCategory', 'detailCategory', 'randomCat', 'topHit', 'listTagCat'));
+    }
+
+    public function postCategory($code, $id){
+        $getPost = mnh_post::findorfail($id);
+        $detailCategory = mnh_lookup_var::where('code', $code)->firstOrFail();
+        $randomCat  = $this->getRanCategory(3,array(4,5,6,7,8));
+        $topHit     = $this->getTopHit($detailCategory->id, 2);
+        $listTagCat = $this->getLookupVar(array(4,5,6,7,8));
+
+        return view('public_content.postCategory', compact('getPost', 'detailCategory', 'randomCat', 'topHit', 'listTagCat'));
     }
 
     public function activity(){
@@ -138,7 +147,7 @@ class ContentController extends Controller
     //getTopHit catetegory > limit
     private function getTopHit($category = false, $limit = 10){
         $data = DB::table('mnh_post as a')
-                ->select(DB::raw('a.*, b.title as typepost'))
+                ->select(DB::raw('a.*, b.title as typepost, b.code as code'))
                 ->leftJoin('mnh_lookup_var as b', 'a.id_var' , 'b.id')
                 ->whereIn('a.id_var', array($category))
                 ->orderBy('a.visitor', 'desc')
