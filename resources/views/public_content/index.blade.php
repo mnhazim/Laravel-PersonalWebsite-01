@@ -2,16 +2,16 @@
 @section('content')
 <!-- 1 SECTION START -->
 <section class="py-0">
-   <div class="container-fluid animatedParent" data-sequence='800' style="height: 100vh;background-color: black;" id="vantanet">
+   <div class="container-fluid animatedParent" data-sequence='500' style="height: 100vh;background-color: black;" id="vantanet">
       <!-- Github Link -->
-      <div class="row mx-3 p-3 animated fadeInUp slowest" data-id='1'>
+      <div class="row mx-3 p-3" data-id='1'>
          <a class="col-lg-4 mx-auto text-white text-center d-flex justify-content-center p-1" href="https://github.com/mnhazim" target="_blank">
             <img class="px-1" src="images/github-logo.png" height="30">
             <h4 class="px-1" style="font-family: bauhaus">Github</h4>
          </a>
       </div>
       <!-- Text In The Middle -->
-      <div class="row mx-3 align-items-end h-50 animated fadeInUp slowest" data-id='2' style="margin-top: -45px;">
+      <div class="row mx-3 align-items-end h-50" data-id='2' style="margin-top: -45px;">
          <div class="col-lg-12 mx-auto text-center text-white">
             <nav class="navbar navbar-expand-sm navbar-dark">
                <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,7 +35,7 @@
             <small style="font-family: bauhaus;font-size: 20px;">{{ $owner->position }}</small>
          </div>
       </div>
-      <div class="row align-items-end h-25 animated fadeInUp slowest" data-id='3'>
+      <div class="row align-items-end h-25" data-id='3'>
          <div class="col-lg-4 mx-auto text-center text-white">
             <div class="font-italictext-white">
                <p class="text-center" style="font-size: 30px;font-family: bauhaus;">{{ $owner->scndsub }}</p>

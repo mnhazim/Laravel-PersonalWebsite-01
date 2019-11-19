@@ -123,7 +123,7 @@
    </div>
    <!--/.container-->
 </section>
-<section class="py-4 animatedParent" id="bicycle-features-1" data-sequence='800'>
+<section class="py-4 animatedParent" data-sequence='800'>
    <div class="container">
       <div class="row m-0">
          <div class="col-lg-12 py-2">
