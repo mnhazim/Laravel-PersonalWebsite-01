@@ -50,16 +50,19 @@
    <!--/.container-->
 </section>
 <section>
-   <div class="container">
+   <div class="container animatedParent" data-sequence='800'>
       <div class="row">
          <div class="col-lg-8">
             <h2 class="display-4 pb-2 ">Latest Post</h2>
             @if(count($getCategory) > 0)
+            @php
+            $num1 = 1;
+            @endphp
             @foreach($getCategory as $listcat)
-            <div class="mb-4 border-bottom">
+            <div class="mb-4 border-bottom animated fadeInUpShort slowest" data-id='{{ $num1++ }}'>
                <img class="d-block w-100 mb-2 radius-primary" src="{{ asset('images/' . $listcat->image) }}" alt="" width="100%">
-               <a class="font-1 color-7" href="#">{{ Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $listcat->created_at)->format('M d, Y') }}</a>
-               <a href="page--single-blog.html">
+               <a class="font-1 color-7" href="/category/{{ $detailCategory->code }}/{{ $listcat->id }}">{{ Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $listcat->created_at)->format('M d, Y') }}</a>
+               <a href="/category/{{ $detailCategory->code }}/{{ $listcat->id }}">
                   <h4>{{ $listcat->title }}</h4>
                </a>
                <p class="mt-2">{{ $listcat->desc }}
@@ -82,11 +85,16 @@
                   <div class="my-2">
                      <h3 class="">Top Hits</h3>
                      @if(count($topHit) > 0)
+                     @php
+                     $num2 = 1;
+                     @endphp
                      @foreach($topHit as $listhit)
-                     <a href="page--single-blog.html">
+                     <div class="animated fadeInRightShort slowest" data-id='{{ $num2++ }}'>
+                        <a href="/category/{{ $listhit->code . '/' . $listhit->id }}" >
                         <img class="mt-3 radius-primary" src="{{ asset('images/' . $listhit->image) }}" width="100%" alt="">
                         <h6 class="fs-0 mt-3">{{ $listhit->title }}</h6>
                      </a>
+                     </div>
                      @endforeach
                      @else
                      <h5>No Data Found</h5>
@@ -96,8 +104,11 @@
                   <div class="my-2">
                      <h5>Categories</h5>
                      <ul class="nav tags mt-3 fs--1">
+                        @php
+                        $num3 = 1;
+                        @endphp
                         @foreach($listTagCat as $tagCat)
-                        <li>
+                        <li class="animated growIn slowest" data-id='{{ $num3++ }}'>
                            <a class="btn btn-sm btn-outline-secondary m-1" href="/category/{{ $tagCat->code }}">{{ $tagCat->title }}</a>
                         </li>
                         @endforeach
@@ -112,14 +123,17 @@
    </div>
    <!--/.container-->
 </section>
-<section class="py-4" id="bicycle-features-1">
+<section class="py-4 animatedParent" id="bicycle-features-1" data-sequence='800'>
    <div class="container">
       <div class="row m-0">
          <div class="col-lg-12 py-2">
             <h3>Other Category</h3>
          </div>
+         @php
+         $num4 = 1;
+         @endphp
          @foreach($randomCat as $ranlist)
-         <div class="col-sm-6 col-lg-3" >
+         <div class="col-sm-6 col-lg-3 animated fadeInDownShort slowest" data-id='{{ $num4++ }}'> 
             <a href="/category/{{$ranlist->code . '/' . $ranlist->id}}">
                <img class="w-100 radius-primary" src="{{ asset('images/'. $ranlist->image) }}" width="100%" alt="" style="filter: blur(0px); opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
                <h6 class="d-inline-block ls fw-500 mb-0 mt-3 color-6">{{ $ranlist->typepost }}</h6>
