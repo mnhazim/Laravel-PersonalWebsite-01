@@ -3,23 +3,6 @@
 @extends('master_public.app')
 @section('content')
 <!-- 1 SECTION START -->
-<style type="text/css">
-   .background-holder {
-   position: absolute;
-   width: 100%;
-   min-height: 100%;
-   top: 0;
-   left: 0;
-   background-size: cover;
-   background-position: center;
-   z-index: -1;
-   overflow: hidden;
-   will-change: transform, opacity, filter;
-   -webkit-backface-visibility: hidden;
-   backface-visibility: hidden;
-   background-repeat: no-repeat;
-   }
-</style>
 <section class="py-0" id="header-split-static">
    <div class="container-fluid animatedParent" data-sequence='800'>
       <div class="row" style="height: 50vh">
