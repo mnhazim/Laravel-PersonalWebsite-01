@@ -2,40 +2,22 @@
 @section('content')
 <!-- 1 SECTION START -->
 <section class="py-0">
-   <div class="container-fluid animatedParent" data-sequence='500' style="height: 100vh;background-color: black;" id="vantanet">
+   <div class="container-fluid wow"  style="height: 100vh;background-color: black;" id="vantanet">
       <!-- Github Link -->
-      <div class="row mx-3 p-3" data-id='1'>
+      <div class="row mx-3 p-3 wow zoomInDown " data-wow-duration="3s" >
          <a class="col-lg-4 mx-auto text-white text-center d-flex justify-content-center p-1" href="https://github.com/mnhazim" target="_blank">
             <img class="px-1" src="images/github-logo.png" height="30">
             <h4 class="px-1" style="font-family: bauhaus">Github</h4>
          </a>
       </div>
       <!-- Text In The Middle -->
-      <div class="row mx-3 align-items-end h-50" data-id='2' style="margin-top: -45px;">
+      <div class="row mx-3 align-items-end h-50 wow slideInUp" data-wow-duration="2s"  style="margin-top: -45px;">
          <div class="col-lg-12 mx-auto text-center text-white">
-            <nav class="navbar navbar-expand-sm navbar-dark">
-               <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-               <span class="navbar-toggler-icon"></span>
-               </button>
-               <div class="collapse navbar-collapse" id="navbarText">
-                  <ul class="navbar-nav mx-auto">
-                     <li class="nav-item active">
-                        <a class="nav-link text-white" href="#">About Me</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Portfolio</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Contact Me</a>
-                     </li>
-                  </ul>
-               </div>
-            </nav>
             <h2 class="main-title">{{ $owner->title }}</h2>
             <small style="font-family: bauhaus;font-size: 20px;">{{ $owner->position }}</small>
          </div>
       </div>
-      <div class="row align-items-end h-25" data-id='3'>
+      <div class="row align-items-end h-25 wow zoomInUp " data-wow-duration="4s" >
          <div class="col-lg-4 mx-auto text-center text-white">
             <div class="font-italictext-white">
                <p class="text-center" style="font-size: 30px;font-family: bauhaus;">{{ $owner->scndsub }}</p>
@@ -48,19 +30,19 @@
 <!-- 2 SECTION START -->
 <section class="py-0">
 
-   <div class="container animatedParent" data-sequence='500' id="home" style="padding-top: 7.5rem;padding-bottom: 7.5rem;">
+   <div class="container wow"  id="home" style="padding-top: 7.5rem;padding-bottom: 7.5rem;">
       <div class="row align-items-center "  id="vantabird">
-         <div class="col-sm-8 col-lg-10 col-xl-4 text-xl-right mt-5 mt-xl-0 order-lg-1 order-2 pr-xl-4 animated fadeInLeftShort slowest" data-id='1'>
+         <div class="col-sm-8 col-lg-10 col-xl-4 text-xl-right mt-5 mt-xl-0 order-lg-1 order-2 pr-xl-4 wow slideInLeft " data-wow-duration="2s" >
             <div class="overflow-hidden ">
                <p class="font-italic lead" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">{{ $owner->desc }}
-                  <br class="d-none d-sm-block"><a href=""><strong>More details?.</strong></a>
+                  <br class="d-none d-sm-block"><a href="{{ Route('about') }}" class="btn btn-outline-secondary"><strong>About Me ?</strong></a>
                </p>
             </div>
          </div>
-         <div class="col-sm-8 col-lg-5 col-xl-4 mt-4 mt-xl-0 px-xl-4 order-lg-2 animated fadeInUpShort slowest" data-id='2'>
-            <img class="w-100 radius-primary" src="images/model6.png" alt="" style="filter: blur(0px); opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+         <div class="pop col-sm-8 col-lg-5 col-xl-4 mt-4 mt-xl-0 px-xl-4 order-lg-2 wow slideInUp" data-wow-duration="3s">
+            <img class="w-100 radius-primary " src="images/try23.png" alt="" style="filter: blur(0px); opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
          </div>
-         <div class="col-sm-8 col-lg-5 col-xl-4 mt-5 mt-xl-0 order-3 align-self-lg-start align-self-xl-center pl-xl-4 animated fadeInRightShort slowest" data-id='3'>
+         <div class="col-sm-8 col-lg-5 col-xl-4 mt-5 mt-xl-0 order-3 align-self-lg-start align-self-xl-center pl-xl-4 wow slideInRight " data-wow-duration="2s">
             <div class="overflow-hidden">
                <h5 class="mb-3" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">{{ $owner->name }}</h5>
             </div>
@@ -76,12 +58,13 @@
          </div>
       </div>
       <div class="row align-items-center" style="padding-top: 100px;">
-         <div class="col-lg-12 mx-auto text-center">
+         <div class="col-lg-12 mx-auto text-center wow zoomInUp " data-wow-duration="2s">
             <div class="font-italic one-time text-dark">
                @foreach ($quote as $listquote)
-               <p class="text-center">" {{$listquote->desc}} "<br>
-                  - {{$listquote->from}} -
-               </p>
+               <blockquote class="blockquote text-center">
+                 <p class="mb-0">" {{$listquote->desc}} "</p>
+                 <footer class="blockquote-footer"><cite title="Source Title">{{$listquote->from}}</cite></footer>
+               </blockquote>
                @endforeach
             </div>
          </div>
@@ -91,7 +74,7 @@
 <!-- 2 SECTION END -->
 <!-- 3 SECTION START -->
 <section class="py-0">
-   <div class="container-fluid animatedParent" data-sequence='800' style="background-color: black;">
+   <div class="container-fluid wow"  style="background-color: black;">
       <div id="sharing" class="container" >
          <div class="row">
             <div class="col-lg-12" style="margin-top: 80px;margin-bottom: 80px;">
@@ -99,11 +82,8 @@
             </div>
          </div>
          <div class="row justify-content-md-center">
-            @php
-            $num1 = 1;
-            @endphp
             @foreach($categories as $category)
-            <div class="col-lg-4 animated fadeInUpShort slowest" data-id='{{ $num1++ }}'>
+            <div class="col-lg-4 wow slideInUp " data-wow-duration="2s">
                <div class="work-box">
                   <a href="/category/{{ $category->code }}" data-lightbox="gallery-mf">
                      <div class="work-img">
@@ -140,7 +120,7 @@
 <!-- 3 SECTION END -->
 <!-- 4 SECTION START -->
 <section class="py-0" id="portfolio" style="background-color: white;">
-   <div class="container animatedParent" data-sequence='800'>
+   <div class="container wow" >
       <div class="row py-4">
          <div class="col-sm-12">
             <div class="title-box text-center">
@@ -159,7 +139,7 @@
          $num2 = 1;
          @endphp
          @foreach ($activity as $listact)
-         <div class="col-sm-6 col-lg-3 animated fadeInDownShort slowest" data-id='{{ $num2++ }}' >
+         <div class="col-sm-6 col-lg-3 wow slideInUp " data-wow-duration="2s"  >
             <div class="work-box h-100">
                <a href="/activity/{{ $listact->postid }}" data-lightbox="gallery-mf">
                   <div class="work-img">
@@ -196,7 +176,7 @@
 <!-- 4 SECTION END -->
 <!-- 5 SECTION START -->
 <section class="py-0" id="sharing" style="background-color: #fafafa;">
-   <div class="container animatedParent" data-sequence='800'>
+   <div class="container wow" >
       <div class="row py-4">
          <div class="col-sm-12">
             <div class="title-box text-center">
@@ -215,7 +195,7 @@
          $num3 = 1;
          @endphp
          @foreach ($sharings as $listshare)
-         <div class="col-lg-4 animated growIn slowest" data-id='{{ $num2++ }}' >
+         <div class="col-lg-4 wow slideInUp " data-wow-duration="2s"  >
             <div class="work-box bg-transparent">
                <a href="/sharing/{{ $listshare->postid }}" data-lightbox="gallery-mf">
                   <div class="work-img">
@@ -248,10 +228,10 @@
 </section>
 <!-- 5 SECTION END -->
 <!-- 6 SECTION START -->
-<section class="py-4">
-   <div class="container animatedParent" data-sequence='500'>
+<section class="py-4 wow">
+   <div class="container wow" >
       <div class="row">
-         <div class="col-lg-6 background-white py-6 py-lg-8 animated fadeInLeftShort slowest" data-id='1'>
+         <div class="col-lg-6 background-white py-6 py-lg-8 wow slideInLeft " data-wow-duration="2s" >
             <div class="row h-100 align-items-center justify-content-center">
                <div class="col-sm-11 col-md-8 col-lg-10 col-xl-9 px-5">
                   <div class="mb-5 mb-lg-7 oveflow-hidden">
@@ -299,7 +279,7 @@
                </div>
             </div>
          </div>
-         <div class="col-lg-6 background-white py-6 py-lg-8 animated fadeInRightShort slowest" data-id='2'>
+         <div class="col-lg-6 background-white py-6 py-lg-8 wow slideInRight " >
             <div class="row h-100 align-items-center justify-content-center">
                <div class="col-sm-8 col-md-6 col-lg-12 col-xl-8" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
                   @if (Session::has('message'))
@@ -378,13 +358,10 @@
             <div class="w-50 w-lg-35 mx-auto">
                <hr class="my-4">
             </div>
-            <div class="text-center">
+            <div class="text-center wow slideInDown " data-wow-duration="2s" >
                @if(count($extlink) > 0)
-               @php
-               $num4 = 1;
-               @endphp
                @foreach($extlink as $link)
-               <div class="d-inline px-2 animated growIn" data-id='{{ $num4++ }}'>
+               <div class="d-inline px-2 >
                   <a href="{{ $link->link }}"  target="_blank" data-toggle="tooltip" data-placement="bottom" title="{{ $link->title }}">
                   <img src="{{ asset('images/' . $link->image) }}" class="rounded mb-2" alt="..." height="60">
                   </a>
@@ -399,17 +376,17 @@
 </section>
 <!-- 6 SECTION END -->
 <!-- 7 SECTION START -->
-<section class="text-center text-white border-top border-color-9 py-4 animatedParent" data-sequence='500' id="software-cta" style="background-color: black;">
+<section class="text-center text-white border-top border-color-9 py-4 wow"  id="software-cta" style="background-color: black;">
    <div class="container">
       <div class="row justify-content-center">
          <div class="col-lg-8" >
-            <div class="overflow-hidden animated growIn slowest" data-id='1'>
+            <div class="overflow-hidden wow slideInDown " data-wow-duration="2s" >
                <h3 style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">Start you next project with me.</h3>
             </div>
-            <div class="overflow-hidden animated fadeInLeftShort slowest" data-id='2'>
+            <div class="overflow-hidden wow slideInLeft " data-wow-duration="2s" >
                <p style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">{{ $owner->descwebsite }}</p>
             </div>
-            <div style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);" class=" animated fadeInRightShort slowest" data-id='3'>
+            <div style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);" class=" wow slideInRight " >
                <button type="button" class="btn btn-outline-light btn-sm">More About This Website ?</button>
             </div>
          </div>
@@ -419,4 +396,24 @@
    <!--/.container-->
 </section>
 <!-- 7 SECTION END -->
+<section class="m-0 p-0" style="background-color: black;">
+   <div class="container ">
+      <div class="row ">
+         <div class="col-lg-12 ">
+            <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog" >
+               <div class="modal-content" style="background-color: transparent!important; backdrop-filter: blur(10px)!important;">
+                  <div class="modal-body bg-transparent">
+                     <div class="work-content">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class="text-white " style="font-size: 30px;">&times;</span><span class="sr-only">Close</span></button>
+                        <img src="" class="imagepreview" style="width: 100%;" >
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         </div>
+      </div>
+   </div>
+</section>
 @stop

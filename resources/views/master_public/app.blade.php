@@ -3,7 +3,7 @@
     <!-- head include -->
     @include('master_public.head')
     <!-- End head include -->
-   <body>
+   <body style="overflow-x: hidden;">
       <!-- Top Header -->
       <!-- End Top Header -->
       @yield('content')

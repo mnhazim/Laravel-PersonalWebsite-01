@@ -50,6 +50,10 @@ class ContentController extends Controller
         return view('public_content.index', compact('quote' , 'owner', 'activity', 'sharings', 'portfolios', 'extlink', 'categories'));
     }
 
+    public function about(){
+        return view ('public_content.about');
+    }
+
     public function category($code){
         $detailCategory = mnh_lookup_var::where('code', $code)->firstOrFail();
 

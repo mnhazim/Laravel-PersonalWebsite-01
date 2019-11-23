@@ -81,9 +81,17 @@ nav ul li a:hover{
      font-family: bauhaus;
      font-size: 65px;
 }
+
+.mob-height{
+    width: 100%;
+}
  @media only screen and (max-width: 600px){
      .main-title{
          font-size: 45px;
+    }
+
+    .mob-height{
+        height: 150px;
     }
 }
  a {
@@ -974,7 +982,12 @@ nav ul li a:hover{
      .counter-box {
          margin-bottom: 1.8rem;
     }
+    .modal-dialog {
+       max-width: 65%;
+       margin: 1.75rem auto;
+    }
 }
+
  @media (min-width: 767px) {
      .about-mf .box-pl2 {
          margin-top: 3rem;

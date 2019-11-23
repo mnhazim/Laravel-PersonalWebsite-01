@@ -19,12 +19,12 @@
    }
 </style>
 <section class="py-0" id="header-split-static">
-   <div class="container-fluid animatedParent" data-sequence='500'>
+   <div class="container-fluid wow">
       <div class="row" style="height: 75vh">
-         <div class="col-lg-6 px-0 order-lg-2 animated fadeInLeftShort slowest" data-id='1'>
+         <div class="col-lg-6 px-0 order-lg-2 wow slideInRight " data-wow-duration="2s">
             <div class="background-holder" style="background-image: url(/../images/{{ $detailCategory->image }}); filter: blur(0px); opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);" > </div>
          </div>
-         <div class="col-lg-6 animated fadeInRightShort slowest" data-id='1'>
+         <div class="col-lg-6 wow slideInLeft " data-wow-duration="2s">
             <div class="row h-100 align-items-center justify-content-center">
                <div class="col-lg-10 py-6 py-lg-8">
                   <h1 class="fw-300 text-uppercase fs-2 fs-sm-4">
@@ -52,11 +52,11 @@
    <!--/.container-->
 </section>
 <section>
-   <div class="container animatedParent" data-sequence='500'>
+   <div class="container wow">
       <div class="row mt-4">
          <div class="col-lg-8 ">
             <div class="row mb-3">
-               <div class="col-12 animated fadeInUpShort slowest" data-id='1'>
+               <div class="col-12 wow slideInUp " data-wow-duration="2s">
                   <div class="row ">
                      <div class="col">
                         <a class="font-1 color-7" href="">{{ Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $getPost->created_at)->format('M d, Y') }}</a>
@@ -78,11 +78,8 @@
                <div class="col-12 mt-8">
                   <h4 class="mb-4">More from Web design</h4>
                </div>
-               @php
-               $num4 = 1;
-               @endphp
                @foreach($randomCat as $ranlist)
-               <div class="col-sm-6 col-lg-4 animated fadeInDownShort slowest" data-id='{{ $num4++ }}' >
+               <div class="col-sm-6 col-lg-4 wow slideInUp " data-wow-duration="2s" >
                   <a href="/category/{{ $ranlist->code . '/' . $ranlist->id }}">
                      <img class="w-100 radius-primary" src="{{ asset('images/'. $ranlist->image) }}" width="100%" alt="" style="filter: blur(0px); opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
                      <h6 class="d-inline-block ls fw-500 mb-0 mt-3 color-6">{{ $ranlist->typepost }}</h6>
@@ -97,11 +94,8 @@
                <div class="col">
                   <h5 class="mt-5">Popular</h5>
                   @if(count($topHit) > 0)
-                  @php
-                  $num2 = 1;
-                  @endphp
                   @foreach($topHit as $listhit)
-                  <div class="animated fadeInRightShort slowest" data-id='{{ $num2++ }}'>
+                  <div class="wow slideInRight " data-wow-duration="2s">
                      <a href="/category/{{ $listhit->code . '/' . $listhit->id }}">
                      <img class="mt-3 radius-primary" src="{{ asset('images/' . $listhit->image) }}" width="100%" alt="">
                      <h6 class="fs-0 mt-3">{{ $listhit->title }}</h6>
@@ -115,11 +109,8 @@
                   <div class="mt-6">
                      <h5>Categories</h5>
                      <ul class="nav tags mt-3 fs--1">
-                        @php
-                        $num3 = 1;
-                        @endphp
                          @foreach($listTagCat as $tagAct)
-                        <li  class="animated growIn slowest" data-id='{{ $num3++ }}'>
+                        <li  class="wow slideInUp " data-wow-duration="2s">
                            <a class="btn btn-sm btn-outline-secondary m-1" href="/category/{{ $tagAct->code }}">{{ $tagAct->title }}</a>
                         </li>
                         @endforeach
