@@ -3,7 +3,7 @@
 <!-- 1 SECTION START -->
 <section class="py-0 wow">
    <div class="container" id="home" style="padding-top: 4.5rem;padding-bottom: 4.5rem;">
-      <div class="row align-items-center wow slideInDown">
+      <div class="row align-items-center wow slideInDown"> 
          <div class="col-lg-12 mx-auto text-center m-4">
             <a href="{{ Route('home') }}" class="btn btn-outline-dark btn-sm">Home Page</a>
          </div>
