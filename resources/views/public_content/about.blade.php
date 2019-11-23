@@ -20,9 +20,9 @@
                   </ul>
                </div>
                <div class="py-2 mx-auto">
-                  <a href="https://github.com/mnhazim" class="" target="_blank"><img src="images/icon/i-git.png" height="50"></a>
+                  <a href="https://github.com/mnhazim" class=""><img src="images/icon/i-git.png" height="50"></a>
                   <a href="#" class=""><img src="images/icon/i-in.png" height="50"></a>
-                  <a href="https://instagram.com/mnhazim__" class="" target="_blank"><img src="images/icon/i_ig.png" height="50"></a>
+                  <a href="https://instagram.com/mnhazim__" class=""><img src="images/icon/i_ig.png" height="50"></a>
                </div>
             </div>
          </div>
@@ -57,25 +57,25 @@
                <div class="py-2 wow slideInLeft" data-wow-duration="2s">
                   <h5 class="lead"><strong><mark>PROGRAMMING SKILLS:</mark></strong></h5>
                   <div class="d-inline p-2">
-                     <a href="#" class="mx-1"  target="_blank" data-toggle="tooltip" data-placement="bottom" title="...">
+                     <a href="#" class="mx-1"  data-toggle="tooltip" data-placement="bottom" title="...">
                      <img src="images/1573400675.png" class="rounded mb-2" alt="..." height="50">
                      </a>
-                     <a href="#" class="mx-1" target="_blank" data-toggle="tooltip" data-placement="bottom" title="...">
+                     <a href="#" class="mx-1" data-toggle="tooltip" data-placement="bottom" title="...">
                      <img src="images/1573400649.png" class="rounded mb-2" alt="..." height="50">
                      </a>
-                     <a href="#" class="mx-1" target="_blank" data-toggle="tooltip" data-placement="bottom" title="...">
+                     <a href="#" class="mx-1" data-toggle="tooltip" data-placement="bottom" title="...">
                      <img src="images/1573400501.png" class="rounded mb-2" alt="..." height="50">
                      </a>
-                     <a href="#" class="mx-1" target="_blank" data-toggle="tooltip" data-placement="bottom" title="...">
+                     <a href="#" class="mx-1" data-toggle="tooltip" data-placement="bottom" title="...">
                      <img src="images/1573400443.png" class="rounded mb-2" alt="..." height="50">
                      </a>
-                     <a href="#" class="mx-1" target="_blank" data-toggle="tooltip" data-placement="bottom" title="...">
+                     <a href="#" class="mx-1" data-toggle="tooltip" data-placement="bottom" title="...">
                      <img src="images/1574443385.png" class="rounded mb-2" alt="..." height="50">
                      </a>
-                     <a href="#" class="mx-1" target="_blank" data-toggle="tooltip" data-placement="bottom" title="...">
+                     <a href="#" class="mx-1" data-toggle="tooltip" data-placement="bottom" title="...">
                      <img src="images/1574443416.png" class="rounded mb-2" alt="..." height="50">
                      </a>
-                     <a href="#" class="mx-1" target="_blank" data-toggle="tooltip" data-placement="bottom" title="...">
+                     <a href="#" class="mx-1" data-toggle="tooltip" data-placement="bottom" title="...">
                      <img src="images/1574446547.jpg" class="rounded mb-2" alt="..." height="50">
                      </a>
                   </div>
@@ -83,21 +83,24 @@
                <div class="py-2 wow slideInRight" data-wow-duration="2s">
                   <h5 class="lead"><strong><mark>FRAMEWORK/LIBRARY:</mark></strong></h5>
                   <div class="d-inline p-2">
-                     <a href="#" class="mx-1" target="_blank" data-toggle="tooltip" data-placement="bottom" title="...">
+                     <a href="#" class="mx-1" data-toggle="tooltip" data-placement="bottom" title="...">
                      <img src="images/1573400603.png" class="rounded mb-2" alt="..." height="50">
                      </a>
-                     <a href="#" class="mx-1" target="_blank" data-toggle="tooltip" data-placement="bottom" title="...">
+                     <a href="#" class="mx-1" data-toggle="tooltip" data-placement="bottom" title="...">
                      <img src="images/1573400572.png" class="rounded mb-2" alt="..." height="50">
+                     </a>
+                     <a href="#" class="mx-1" data-toggle="tooltip" data-placement="bottom" title="...">
+                     <img src="images/1574514283.png" class="rounded mb-2" alt="..." height="50">
                      </a>
                   </div>
                </div>
                <div class="py-2 wow slideInLeft" data-wow-duration="2s">
                   <h5 class="lead"><strong><mark>SYSTEMS:</mark></strong></h5>
                   <div class="d-inline p-2">
-                     <a href="#" class="mx-1" target="_blank" data-toggle="tooltip" data-placement="bottom" title="...">
+                     <a href="#" class="mx-1" data-toggle="tooltip" data-placement="bottom" title="...">
                      <img src="images/window.png" class="rounded mb-2" alt="..." height="50">
                      </a>
-                     <a href="#" class="mx-1" target="_blank" data-toggle="tooltip" data-placement="bottom" title="...">
+                     <a href="#" class="mx-1" data-toggle="tooltip" data-placement="bottom" title="...">
                      <img src="images/centos.png" class="rounded mb-2" alt="..." height="50">
                      </a>
                   </div>
@@ -105,7 +108,7 @@
                <div class="py-2 wow slideInRight" data-wow-duration="2s">
                   <h5 class="lead"><strong><mark>CONTENT MANAGEMENT SYSTEM(CMS):</mark></strong></h5>
                   <div class="d-inline p-2">
-                     <a href="#" class="mx-1" target="_blank" data-toggle="tooltip" data-placement="bottom" title="...">
+                     <a href="#" class="mx-1" data-toggle="tooltip" data-placement="bottom" title="...">
                      <img src="images/1573400793.png" class="rounded mb-2" alt="..." height="50">
                      </a>
                   </div>
@@ -113,16 +116,16 @@
                <div class="py-2 wow slideInLeft" data-wow-duration="2s">
                   <h5 class="lead"><strong><mark>EXTRA SKILLS:</mark></strong></h5>
                   <div class="d-inline p-2">
-                     <a href="#" class="mx-1" target="_blank" data-toggle="tooltip" data-placement="bottom" title="...">
+                     <a href="#" class="mx-1" data-toggle="tooltip" data-placement="bottom" title="...">
                      <img src="images/1573400721.png" class="rounded mb-2" alt="..." height="50">
                      </a>
-                     <a href="#" class="mx-1" target="_blank" data-toggle="tooltip" data-placement="bottom" title="...">
+                     <a href="#" class="mx-1" data-toggle="tooltip" data-placement="bottom" title="...">
                      <img src="images/1573400841.png" class="rounded mb-2" alt="..." height="50">
                      </a>
-                     <a href="#" class="mx-1" target="_blank" data-toggle="tooltip" data-placement="bottom" title="...">
+                     <a href="#" class="mx-1" data-toggle="tooltip" data-placement="bottom" title="...">
                      <img src="images/1573400905.png" class="rounded mb-2" alt="..." height="50">
                      </a>
-                     <a href="#" class="mx-1" target="_blank" data-toggle="tooltip" data-placement="bottom" title="...">
+                     <a href="#" class="mx-1" data-toggle="tooltip" data-placement="bottom" title="...">
                      <img src="images/mso.png" class="rounded mb-2" alt="..." height="50">
                      </a>
                   </div>
@@ -130,19 +133,19 @@
                <div class="py-2 wow slideInRight" data-wow-duration="2s">
                   <h5 class="lead"><strong><mark>SOFTWARE/TOOLS:</mark></strong></h5>
                   <div class="d-inline p-2">
-                     <a href="#" class="mx-1" target="_blank" data-toggle="tooltip" data-placement="bottom" title="...">
+                     <a href="#" class="mx-1" data-toggle="tooltip" data-placement="bottom" title="...">
                      <img src="images/git.png" class="rounded mb-2" alt="..." height="50">
                      </a>
-                     <a href="#" class="mx-1" target="_blank" data-toggle="tooltip" data-placement="bottom" title="...">
+                     <a href="#" class="mx-1" data-toggle="tooltip" data-placement="bottom" title="...">
                      <img src="images/laragon.jpg" class="rounded mb-2" alt="..." height="50">
                      </a>
-                     <a href="#" class="mx-1" target="_blank" data-toggle="tooltip" data-placement="bottom" title="...">
+                     <a href="#" class="mx-1" data-toggle="tooltip" data-placement="bottom" title="...">
                      <img src="images/sqlyog.png" class="rounded mb-2" alt="..." height="50">
                      </a>
-                     <a href="#" class="mx-1" target="_blank" data-toggle="tooltip" data-placement="bottom" title="...">
+                     <a href="#" class="mx-1" data-toggle="tooltip" data-placement="bottom" title="...">
                      <img src="images/hedi.png" class="rounded mb-2" alt="..." height="50">
                      </a>
-                     <a href="#" class="mx-1" target="_blank" data-toggle="tooltip" data-placement="bottom" title="...">
+                     <a href="#" class="mx-1" data-toggle="tooltip" data-placement="bottom" title="...">
                      <img src="images/tortoisesvn.png" class="rounded mb-2" alt="..." height="50">
                      </a>
                   </div>

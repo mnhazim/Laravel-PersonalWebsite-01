@@ -135,9 +135,7 @@
          </div>
       </div>
       <div class="row m-0">
-         @php
-         $num2 = 1;
-         @endphp
+         @if(count($activity) > 0)
          @foreach ($activity as $listact)
          <div class="col-sm-6 col-lg-3 wow slideInUp " data-wow-duration="2s"  >
             <div class="work-box h-100">
@@ -164,6 +162,9 @@
             </div>
          </div>
          @endforeach
+         @else
+         <h5 class="text-center">No Activity Found</h5>
+         @endif
       </div>
       <div class="row">
          <div class="col-lg-12 my-4">
@@ -191,9 +192,7 @@
          </div>
       </div>
       <div class="row justify-content-between">
-         @php
-         $num3 = 1;
-         @endphp
+         @if(count($sharings) > 0)
          @foreach ($sharings as $listshare)
          <div class="col-lg-4 wow slideInUp " data-wow-duration="2s"  >
             <div class="work-box bg-transparent">
@@ -218,6 +217,9 @@
             </div>
          </div>
          @endforeach
+         @else
+         <h5 class="text-center">No Sharing Found</h5>
+         @endif
       </div>
       <div class="row">
          <div class="col-lg-12 my-4">

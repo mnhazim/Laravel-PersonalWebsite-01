@@ -120,9 +120,7 @@
          <div class="col-lg-12 py-2">
             <h3>Other Category</h3>
          </div>
-         @php
-         $num4 = 1;
-         @endphp
+         @if($randomCat > 0)
          @foreach($randomCat as $ranlist)
          <div class="col-sm-6 col-lg-3 wow slideInLeft " data-wow-duration="2s"> 
             <a href="/category/{{$ranlist->code . '/' . $ranlist->id}}">
@@ -133,6 +131,9 @@
             </a>
          </div>
          @endforeach
+         @else
+         <h5 class="text-center">No Data Found</h5>
+         @endif
       </div>
       <!--/.row-->
    </div>

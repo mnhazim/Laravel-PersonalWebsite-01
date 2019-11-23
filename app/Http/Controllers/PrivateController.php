@@ -193,6 +193,7 @@ class PrivateController extends Controller
     public function editQuote($mnh_quote){
         $liststatus = DB::table('mnh_lookup_var')->where('id_mst', 4)->get();
         $quote = mnh_quote::find($mnh_quote);
+
         return view('private_content.editQuote', compact('quote', 'liststatus'));
     }
 
@@ -211,7 +212,8 @@ class PrivateController extends Controller
         $quote->save();
 
         session()->flash('success', 'your data has been saved');
-        return back();
+        return $this::quote();
+        exit;
     }
 
     //quote delete

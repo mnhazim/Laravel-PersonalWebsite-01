@@ -139,9 +139,10 @@ class ContentController extends Controller
                 ->select(DB::raw('a.*, b.title as typepost, b.code as code'))
                 ->leftJoin('mnh_lookup_var as b', 'a.id_var' , 'b.id')
                 ->whereIn('a.id_var', $idmst)
-                ->get()
-                ->random($limit);
-        if ($data) {
+                ->get();
+
+        if (!$data->isEmpty()) {
+            $data = $data->random($limit);
             return $data;
         } else {
             return 0;
