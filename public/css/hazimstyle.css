@@ -85,6 +85,10 @@ nav ul li a:hover{
 .mob-height{
     width: 100%;
 }
+
+.pop:hover{
+    cursor: pointer;
+}
  @media only screen and (max-width: 600px){
      .main-title{
          font-size: 45px;

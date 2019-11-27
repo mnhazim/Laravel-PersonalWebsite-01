@@ -54,6 +54,10 @@ class ContentController extends Controller
         return view ('public_content.about');
     }
 
+    public function history(){
+        return view('public_content.history');
+    }
+
     public function category($code){
         $detailCategory = mnh_lookup_var::where('code', $code)->firstOrFail();
 

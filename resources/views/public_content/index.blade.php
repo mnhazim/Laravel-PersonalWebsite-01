@@ -51,7 +51,7 @@
                <p class="intro-subtitle"><span class="text-slider-items" style="display: none;">{{ $owner->positions }}</span><strong class="text-slider"></strong></p>
                <div class="py-2 mx-auto">
                   <a href="https://github.com/mnhazim" class="" target="_blank"><img src="images/icon/i-git.png" height="50"></a>
-                  <a href="#" class=""><img src="images/icon/i-in.png" height="50"></a>
+                  <!-- <a href="#" class=""><img src="images/icon/i-in.png" height="50"></a> -->
                   <a href="https://instagram.com/mnhazim__" class="" target="_blank"><img src="images/icon/i_ig.png" height="50"></a>
                </div>
             </div>
@@ -77,8 +77,12 @@
    <div class="container-fluid wow"  style="background-color: black;">
       <div id="sharing" class="container" >
          <div class="row">
-            <div class="col-lg-12" style="margin-top: 80px;margin-bottom: 80px;">
-               <h1 class="text-white text-center" style="font-size: 50px;font-family: romerio;">I Learned About Web Development, Internet of Things, Cyber Security and More.</h1>
+            <div class="col-lg-12 text-white text-center" style="margin-top: 80px;margin-bottom: 80px;">
+               <h1 class="" style="font-size: 50px;font-family: romerio;">PORTFOLIO</h1>
+               <p class="">
+                  Using any resource, idea, creativity to develop something new. There is my Portfolio.
+               </p>
+               <div class="line-mf"></div>
             </div>
          </div>
          <div class="row justify-content-md-center">
@@ -363,7 +367,7 @@
             <div class="text-center wow slideInDown " data-wow-duration="2s" >
                @if(count($extlink) > 0)
                @foreach($extlink as $link)
-               <div class="d-inline px-2 >
+               <div class="d-inline px-2 ">
                   <a href="{{ $link->link }}"  target="_blank" data-toggle="tooltip" data-placement="bottom" title="{{ $link->title }}">
                   <img src="{{ asset('images/' . $link->image) }}" class="rounded mb-2" alt="..." height="60">
                   </a>
@@ -389,7 +393,7 @@
                <p style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">{{ $owner->descwebsite }}</p>
             </div>
             <div style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);" class=" wow slideInRight " >
-               <button type="button" class="btn btn-outline-light btn-sm">More About This Website ?</button>
+               <a href="{{ Route('history') }}" class="btn btn-outline-light btn-sm">More About This Website ?</a>
             </div>
          </div>
       </div>

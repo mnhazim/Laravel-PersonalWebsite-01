@@ -21,7 +21,7 @@
                </div>
                <div class="py-2 mx-auto">
                   <a href="https://github.com/mnhazim" class=""><img src="images/icon/i-git.png" height="50"></a>
-                  <a href="#" class=""><img src="images/icon/i-in.png" height="50"></a>
+                  <!-- <a href="#" class=""><img src="images/icon/i-in.png" height="50"></a> -->
                   <a href="https://instagram.com/mnhazim__" class=""><img src="images/icon/i_ig.png" height="50"></a>
                </div>
             </div>
@@ -54,99 +54,119 @@
       <div class="col-12">
          <div class="row align-items-center">
             <div class="col-lg-6 pb-lg-8 mt-4 mt-lg-0 mb-8 mb-lg-0 mx-auto text-center">
-               <div class="py-2 wow slideInLeft" data-wow-duration="2s">
+               <div class="py-2 wow slideInLeft" data-wow-duration="1.5s">
                   <h5 class="lead"><strong><mark>PROGRAMMING SKILLS:</mark></strong></h5>
                   <div class="d-inline p-2">
-                     <a href="#" class="mx-1"  data-toggle="tooltip" data-placement="bottom" title="...">
+                     <a href="#" class="mx-1"  data-toggle="tooltip" data-placement="bottom" title="PHP">
                      <img src="images/1573400675.png" class="rounded mb-2" alt="..." height="50">
                      </a>
-                     <a href="#" class="mx-1" data-toggle="tooltip" data-placement="bottom" title="...">
+                     <a href="#" class="mx-1" data-toggle="tooltip" data-placement="bottom" title="MySQL">
                      <img src="images/1573400649.png" class="rounded mb-2" alt="..." height="50">
                      </a>
-                     <a href="#" class="mx-1" data-toggle="tooltip" data-placement="bottom" title="...">
+                     <a href="#" class="mx-1" data-toggle="tooltip" data-placement="bottom" title="HTML5">
                      <img src="images/1573400501.png" class="rounded mb-2" alt="..." height="50">
                      </a>
-                     <a href="#" class="mx-1" data-toggle="tooltip" data-placement="bottom" title="...">
+                     <a href="#" class="mx-1" data-toggle="tooltip" data-placement="bottom" title="CSS3">
                      <img src="images/1573400443.png" class="rounded mb-2" alt="..." height="50">
                      </a>
-                     <a href="#" class="mx-1" data-toggle="tooltip" data-placement="bottom" title="...">
+                     <a href="#" class="mx-1" data-toggle="tooltip" data-placement="bottom" title="C">
                      <img src="images/1574443385.png" class="rounded mb-2" alt="..." height="50">
                      </a>
-                     <a href="#" class="mx-1" data-toggle="tooltip" data-placement="bottom" title="...">
+                     <a href="#" class="mx-1" data-toggle="tooltip" data-placement="bottom" title="C++">
                      <img src="images/1574443416.png" class="rounded mb-2" alt="..." height="50">
                      </a>
-                     <a href="#" class="mx-1" data-toggle="tooltip" data-placement="bottom" title="...">
+                     <a href="#" class="mx-1" data-toggle="tooltip" data-placement="bottom" title="JavaScript">
                      <img src="images/1574446547.jpg" class="rounded mb-2" alt="..." height="50">
                      </a>
                   </div>
                </div>
                <div class="py-2 wow slideInRight" data-wow-duration="2s">
-                  <h5 class="lead"><strong><mark>FRAMEWORK/LIBRARY:</mark></strong></h5>
+                  <h5 class="lead"><strong><mark>PHP FRAMEWORK:</mark></strong></h5>
                   <div class="d-inline p-2">
-                     <a href="#" class="mx-1" data-toggle="tooltip" data-placement="bottom" title="...">
+                     <a href="#" class="mx-1" data-toggle="tooltip" data-placement="bottom" title="Laravel">
                      <img src="images/1573400603.png" class="rounded mb-2" alt="..." height="50">
                      </a>
-                     <a href="#" class="mx-1" data-toggle="tooltip" data-placement="bottom" title="...">
-                     <img src="images/1573400572.png" class="rounded mb-2" alt="..." height="50">
-                     </a>
-                     <a href="#" class="mx-1" data-toggle="tooltip" data-placement="bottom" title="...">
+                     <a href="#" class="mx-1" data-toggle="tooltip" data-placement="bottom" title="Genpro">
                      <img src="images/1574514283.png" class="rounded mb-2" alt="..." height="50">
                      </a>
                   </div>
                </div>
-               <div class="py-2 wow slideInLeft" data-wow-duration="2s">
+               <div class="py-2 wow slideInLeft" data-wow-duration="2.5s">
+                  <h5 class="lead"><strong><mark>PLUGIN/LIBRARY:</mark></strong></h5>
+                  <div class="d-inline p-2">
+                     <a href="#" class="mx-1" data-toggle="tooltip" data-placement="bottom" title="Bootstrap">
+                     <img src="images/1573399874.png" class="rounded mb-2" alt="..." height="50">
+                     </a>
+                     <a href="#" class="mx-1" data-toggle="tooltip" data-placement="bottom" title="JQuery">
+                     <img src="images/1573400572.png" class="rounded mb-2" alt="..." height="50">
+                     </a>
+                     <a href="#" class="mx-1" data-toggle="tooltip" data-placement="bottom" title="WowJs">
+                     <img src="images/1574573272.jpg" class="rounded mb-2" alt="..." height="50">
+                     </a>
+                  </div>
+               </div>
+               <div class="py-2 wow slideInRight" data-wow-duration="3s">
                   <h5 class="lead"><strong><mark>SYSTEMS:</mark></strong></h5>
                   <div class="d-inline p-2">
-                     <a href="#" class="mx-1" data-toggle="tooltip" data-placement="bottom" title="...">
+                     <a href="#" class="mx-1" data-toggle="tooltip" data-placement="bottom" title="Windows">
                      <img src="images/window.png" class="rounded mb-2" alt="..." height="50">
                      </a>
-                     <a href="#" class="mx-1" data-toggle="tooltip" data-placement="bottom" title="...">
+                     <a href="#" class="mx-1" data-toggle="tooltip" data-placement="bottom" title="Centos">
                      <img src="images/centos.png" class="rounded mb-2" alt="..." height="50">
                      </a>
                   </div>
                </div>
-               <div class="py-2 wow slideInRight" data-wow-duration="2s">
+               <div class="py-2 wow slideInLeft" data-wow-duration="3s">
                   <h5 class="lead"><strong><mark>CONTENT MANAGEMENT SYSTEM(CMS):</mark></strong></h5>
                   <div class="d-inline p-2">
-                     <a href="#" class="mx-1" data-toggle="tooltip" data-placement="bottom" title="...">
+                     <a href="#" class="mx-1" data-toggle="tooltip" data-placement="bottom" title="Wordpress">
                      <img src="images/1573400793.png" class="rounded mb-2" alt="..." height="50">
                      </a>
                   </div>
                </div>
-               <div class="py-2 wow slideInLeft" data-wow-duration="2s">
-                  <h5 class="lead"><strong><mark>EXTRA SKILLS:</mark></strong></h5>
+               <div class="py-2 wow slideInRight" data-wow-duration="3s">
+                  <h5 class="lead"><strong><mark>SOFTWARE/TOOLS:</mark></strong></h5>
                   <div class="d-inline p-2">
-                     <a href="#" class="mx-1" data-toggle="tooltip" data-placement="bottom" title="...">
-                     <img src="images/1573400721.png" class="rounded mb-2" alt="..." height="50">
+                     <a href="#" class="mx-1" data-toggle="tooltip" data-placement="bottom" title="Git Control">
+                     <img src="images/git.png" class="rounded mb-2" alt="..." height="50">
                      </a>
-                     <a href="#" class="mx-1" data-toggle="tooltip" data-placement="bottom" title="...">
-                     <img src="images/1573400841.png" class="rounded mb-2" alt="..." height="50">
+                     <a href="#" class="mx-1" data-toggle="tooltip" data-placement="bottom" title="Laragon">
+                     <img src="images/laragon.jpg" class="rounded mb-2" alt="..." height="50">
                      </a>
-                     <a href="#" class="mx-1" data-toggle="tooltip" data-placement="bottom" title="...">
-                     <img src="images/1573400905.png" class="rounded mb-2" alt="..." height="50">
+                     <a href="#" class="mx-1" data-toggle="tooltip" data-placement="bottom" title="SQLYog">
+                     <img src="images/sqlyog.png" class="rounded mb-2" alt="..." height="50">
                      </a>
-                     <a href="#" class="mx-1" data-toggle="tooltip" data-placement="bottom" title="...">
-                     <img src="images/mso.png" class="rounded mb-2" alt="..." height="50">
+                     <a href="#" class="mx-1" data-toggle="tooltip" data-placement="bottom" title="HeidiSQL">
+                     <img src="images/hedi.png" class="rounded mb-2" alt="..." height="50">
+                     </a>
+                     <a href="#" class="mx-1" data-toggle="tooltip" data-placement="bottom" title="Tortoise SVN">
+                     <img src="images/tortoisesvn.png" class="rounded mb-2" alt="..." height="50">
+                     </a>
+                     <a href="#" class="mx-1" data-toggle="tooltip" data-placement="bottom" title="File Zilla">
+                     <img src="images/1573400957.png" class="rounded mb-2" alt="..." height="50">
+                     </a>
+                     <a href="#" class="mx-1" data-toggle="tooltip" data-placement="bottom" title="Putty">
+                     <img src="images/put.jpg" class="rounded mb-2" alt="..." height="50">
+                     </a>
+                     <a href="#" class="mx-1" data-toggle="tooltip" data-placement="bottom" title="XAMPP">
+                     <img src="images/xampplogo.png" class="rounded mb-2" alt="..." height="50">
                      </a>
                   </div>
                </div>
-               <div class="py-2 wow slideInRight" data-wow-duration="2s">
-                  <h5 class="lead"><strong><mark>SOFTWARE/TOOLS:</mark></strong></h5>
+               <div class="py-2 wow slideInLeft" data-wow-duration="3s">
+                  <h5 class="lead"><strong><mark>EXTRA SKILLS:</mark></strong></h5>
                   <div class="d-inline p-2">
-                     <a href="#" class="mx-1" data-toggle="tooltip" data-placement="bottom" title="...">
-                     <img src="images/git.png" class="rounded mb-2" alt="..." height="50">
+                     <a href="#" class="mx-1" data-toggle="tooltip" data-placement="bottom" title="Adobe Photoshop">
+                     <img src="images/1573400721.png" class="rounded mb-2" alt="..." height="50">
                      </a>
-                     <a href="#" class="mx-1" data-toggle="tooltip" data-placement="bottom" title="...">
-                     <img src="images/laragon.jpg" class="rounded mb-2" alt="..." height="50">
+                     <a href="#" class="mx-1" data-toggle="tooltip" data-placement="bottom" title="Adobe Experience">
+                     <img src="images/1573400841.png" class="rounded mb-2" alt="..." height="50">
                      </a>
-                     <a href="#" class="mx-1" data-toggle="tooltip" data-placement="bottom" title="...">
-                     <img src="images/sqlyog.png" class="rounded mb-2" alt="..." height="50">
+                     <a href="#" class="mx-1" data-toggle="tooltip" data-placement="bottom" title="Adobe Illustrator">
+                     <img src="images/1573400905.png" class="rounded mb-2" alt="..." height="50">
                      </a>
-                     <a href="#" class="mx-1" data-toggle="tooltip" data-placement="bottom" title="...">
-                     <img src="images/hedi.png" class="rounded mb-2" alt="..." height="50">
-                     </a>
-                     <a href="#" class="mx-1" data-toggle="tooltip" data-placement="bottom" title="...">
-                     <img src="images/tortoisesvn.png" class="rounded mb-2" alt="..." height="50">
+                     <a href="#" class="mx-1" data-toggle="tooltip" data-placement="bottom" title="Microsoft Office">
+                     <img src="images/mso.png" class="rounded mb-2" alt="..." height="50">
                      </a>
                   </div>
                </div>
@@ -212,7 +232,7 @@
       </div>
       <div class="col-lg-6 mt-4 mt-lg-0 mb-8 mb-lg-0 my-lg-8">
          <div class="py-2 wow slideInRight" data-wow-duration="2s">
-            <span>01 FEB 2018 – NOW | <strong>PROGRAMMER</strong></span>
+            <span>01 FEB 2019 – NOW | <strong>PROGRAMMER</strong></span>
             <h4>MYNET TECHNOLOGIES SDN BHD</h4>
             <p class="lead">Develop applications and maintenance for previous project, setup and configure server, attend meeting and present to deal with client.</p>
          </div>
