@@ -27,7 +27,7 @@
    <div class="container">
       <div class="row justify-content-center text-center mb-6">
       <div class="col-lg-6 wow slideInUp" data-wow-duration="2s">
-         <h1 class="display-4 ">INTODUCTION</h1>
+         <h1 class="display-4 ">INTRODUCTION</h1>
          <hr class="short mt-4 border-secondary">
       </div>
    </div>

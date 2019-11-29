@@ -4,7 +4,7 @@
 }
 @font-face {
  font-family: bauhaus;
- src: url('../font/bauhaus93.ttf');
+ src: url('../font/perfectly.ttf');
 }
 @font-face {
    font-family: romerio ;
@@ -79,7 +79,7 @@ nav ul li a:hover{
 }
  .main-title{
      font-family: bauhaus;
-     font-size: 65px;
+     font-size: 90px;
 }
 
 .mob-height{
@@ -91,7 +91,7 @@ nav ul li a:hover{
 }
  @media only screen and (max-width: 600px){
      .main-title{
-         font-size: 45px;
+         font-size: 65px;
     }
 
     .mob-height{

@@ -9,7 +9,7 @@
          </div>
       </div>
       <div class="row align-items-center "  id="vantabird">
-         <div class="col-sm-12 col-lg-10 col-xl-4 text-xl-right mt-5 mt-xl-0 order-lg-1 order-2 pr-xl-4" >
+         <div class="col-sm-12 col-lg-10 col-xl-4 text-xl-right mt-5 mt-xl-0 order-lg-1 order-3 pr-xl-4" >
             <div class="overflow-hidden  wow slideInLeft" data-wow-duration="2s">
                <div class="overflow-hidden">
                   <p style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">APRIL 27, 1996 (23 YEARS)<br>BANDAR PENAWAR, JOHOR</p>
@@ -29,7 +29,7 @@
          <div class="pop col-sm-12 col-lg-5 col-xl-4 mt-4 mt-xl-0 px-xl-4 order-lg-2 wow slideInUp " data-wow-duration="2s"> 
             <img class="w-100 radius-primary" src="images/XOEW7523.png" alt="" style="filter: blur(0px); opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
          </div>
-         <div class="col-sm-12 col-lg-5 col-xl-4 mt-5 mt-xl-0 order-3 align-self-lg-start align-self-xl-center pl-xl-4 wow slideInRight" data-wow-duration="2s">
+         <div class="col-sm-12 col-lg-5 col-xl-4 mt-5 mt-xl-0 order-2 align-self-lg-start align-self-xl-center pl-xl-4 wow slideInRight" data-wow-duration="3.5s">
             <div class="overflow-hidden">
                <h5 class="mb-3" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">MUHAMAD NOOR HAZIM MOHAMED ESA</h5>
             </div>

@@ -48,7 +48,7 @@
          <img class="mb-4" src="{{ asset('images/icon/i_logoH.png') }}" alt="" width="72" height="72">
          <h3 class="h3 mb-3 font-weight-normal">Whats up Bro. <br><small>Any good news ?</small></h3>
          <label class="sr-only">Email address</label>
-         <input type="email" class="form-control" placeholder="Email address" required autocomplete="off" name="email">
+         <input type="email" class="form-control" placeholder="Email address" required autocomplete="off" name="username">
          <label class="sr-only">Password</label>
          <input type="password" class="form-control" placeholder="Password" required autocomplete="off" name="password">
          <button class="btn btn-sm btn-danger btn-block" type="submit">Sign in</button>

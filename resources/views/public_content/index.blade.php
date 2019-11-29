@@ -32,17 +32,17 @@
 
    <div class="container wow"  id="home" style="padding-top: 7.5rem;padding-bottom: 7.5rem;">
       <div class="row align-items-center "  id="vantabird">
-         <div class="col-sm-8 col-lg-10 col-xl-4 text-xl-right mt-5 mt-xl-0 order-lg-1 order-2 pr-xl-4 wow slideInLeft " data-wow-duration="2s" >
+         <div class="col-sm-8 col-lg-10 col-xl-4 text-xl-right mt-5 mt-xl-0 order-lg-1 order-2 mx-auto pr-xl-4 wow slideInLeft " data-wow-duration="2s" >
             <div class="overflow-hidden ">
                <p class="font-italic lead" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">{{ $owner->desc }}
                   <br class="d-none d-sm-block"><a href="{{ Route('about') }}" class="btn btn-outline-secondary"><strong>About Me ?</strong></a>
                </p>
             </div>
          </div>
-         <div class="pop col-sm-8 col-lg-5 col-xl-4 mt-4 mt-xl-0 px-xl-4 order-lg-2 wow slideInUp" data-wow-duration="3s">
+         <div class="pop col-sm-8 col-lg-5 col-xl-4 mt-4 mt-xl-0 px-xl-4 order-lg-2 mx-auto wow slideInUp" data-wow-duration="3s">
             <img class="w-100 radius-primary " src="images/try23.png" alt="" style="filter: blur(0px); opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
          </div>
-         <div class="col-sm-8 col-lg-5 col-xl-4 mt-5 mt-xl-0 order-3 align-self-lg-start align-self-xl-center pl-xl-4 wow slideInRight " data-wow-duration="2s">
+         <div class="col-sm-8 col-lg-5 col-xl-4 mt-5 mt-xl-0 order-3 align-self-lg-start align-self-xl-center mx-auto pl-xl-4 wow slideInRight " data-wow-duration="2s">
             <div class="overflow-hidden">
                <h5 class="mb-3" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">{{ $owner->name }}</h5>
             </div>
@@ -285,7 +285,7 @@
                </div>
             </div>
          </div>
-         <div class="col-lg-6 background-white py-6 py-lg-8 wow slideInRight " >
+         <div class="col-lg-6 background-white py-6 py-lg-8 wow slideInUp " >
             <div class="row h-100 align-items-center justify-content-center">
                <div class="col-sm-8 col-md-6 col-lg-12 col-xl-8" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
                   @if (Session::has('message'))
@@ -392,7 +392,7 @@
             <div class="overflow-hidden wow slideInLeft " data-wow-duration="2s" >
                <p style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">{{ $owner->descwebsite }}</p>
             </div>
-            <div style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);" class=" wow slideInRight " >
+            <div style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);" class=" wow slideInUp " >
                <a href="{{ Route('history') }}" class="btn btn-outline-light btn-sm">More About This Website ?</a>
             </div>
          </div>
