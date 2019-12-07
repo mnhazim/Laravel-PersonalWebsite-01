@@ -10,6 +10,7 @@ use App\mnh_lookup_mst;
 use App\mnh_lookup_var;
 use App\mnh_quote;
 use App\mnh_form;
+use Carbon\Carbon;
 
 
 class PrivateController extends Controller
@@ -61,8 +62,9 @@ class PrivateController extends Controller
         $newpost->content = Request('content');
         $newpost->place = Request('place');
         $newpost->status = Request('status');
+        $newpost->datepost = (Request('datepost') == '') ? Carbon::now() : Request('datepost') ;
         if ($image = request()->file('image')) {
-            $imageName = time().'.'.request()->image->getClientOriginalExtension();
+            $imageName = time().'.'.strtolower(request()->image->getClientOriginalExtension());
             $newpost->image = $imageName;
             $image->move(public_path('images'), $imageName);
         }
@@ -116,9 +118,10 @@ class PrivateController extends Controller
         $editpost->desc = Request('desc');
         $editpost->content = Request('content');
         $editpost->place = Request('place');
+        $editpost->datepost = (Request('datepost') == '') ? Carbon::now() : Request('datepost') ;
         $editpost->status = Request('status');
         if ($image = request()->file('image')) {
-            $imageName = time().'.'.request()->image->getClientOriginalExtension();
+            $imageName = time().'.'.strtolower(request()->image->getClientOriginalExtension());
             $editpost->image = $imageName;
             $image->move(public_path('images'), $imageName);
         }
@@ -312,7 +315,7 @@ class PrivateController extends Controller
         $lookupvar->id_mst = Request('mstid');
         $lookupvar->title = Request('title');
         if ($image = request()->file('image')) {
-            $imageName = time().'.'.request()->image->getClientOriginalExtension();
+            $imageName = time().'.'.strtolower(request()->image->getClientOriginalExtension());
             $lookupvar->image = $imageName;
             $image->move(public_path('images'), $imageName);
         }
@@ -352,7 +355,7 @@ class PrivateController extends Controller
         $lookupvar->id_mst = Request('mstid');
         $lookupvar->title = Request('title');
         if ($image = request()->file('image')) {
-            $imageName = time().'.'.request()->image->getClientOriginalExtension();
+            $imageName = time().'.'.strtolower(request()->image->getClientOriginalExtension());
             $lookupvar->image = $imageName;
             $image->move(public_path('images'), $imageName);
         }

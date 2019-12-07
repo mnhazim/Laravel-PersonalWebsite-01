@@ -59,7 +59,7 @@
                <div class="col-12 wow slideInUp " data-wow-duration="2s">
                   <div class="row ">
                      <div class="col">
-                        <a class="font-1 color-7" href="">{{ Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $getPost->created_at)->format('M d, Y') }}</a>
+                        <a class="font-1 color-7" href="">{{ Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $getPost->datepost)->format('M d, Y') }}</a>
                      </div>
                   </div>
                   <h4 class="mt-2">{{ $getPost->title }}</h4>

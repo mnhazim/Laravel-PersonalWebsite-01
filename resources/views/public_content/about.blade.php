@@ -192,7 +192,7 @@
             </div>
             <div class="col-lg-6 pb-lg-8 mt-4 mt-lg-0 mb-8 mb-lg-0">
                <div class="py-2 wow slideInLeft" data-wow-duration="2s">
-                  <span>2014 - 2015 <strong>Politeknik Mersing, Johor</strong></span>
+                  <span>2015 - 2018 <strong>Politeknik Mersing, Johor</strong></span>
                   <h4>Diploma Information Technology and Communication (Programming)</h4>
                   <h6 class="lead">3.48 CGPA. In Polytechnic Mersing Johor, basically courses about hardware and software, database, Java, C++, HTML and CSS. For final year project must develop one system and fully function.</h6>
                   <ul class="lead">
@@ -211,7 +211,7 @@
                   </ul>
                </div>
                <div class="py-2 wow slideInLeft" data-wow-duration="2s">
-                  <span>2012 - 2014 | <strong>Sekolah Menengah Bandar Penawar</strong></span>
+                  <span>2012 - 2013 | <strong>Sekolah Menengah Bandar Penawar</strong></span>
                   <h4>Malaysian Certificate of Education(SPM)</h4>
                   <h6 class="lead">Science's class from 2012 and mostly study about pure science like Physics, chemistry, Biology and etc.</h6>
                </div>
@@ -264,21 +264,21 @@
             <div class="col-lg-6 col-md-6 col-sm-12 d-flex pb-3 wow slideInLeft" data-wow-duration="2s">
                <div class="work-box bg-transparent">
                   <div class="work-content">
-                     <span><strong>1.</strong> DECEMBER 2018 </span>
-                     <h4>FORUM WITH ALUMNI KOLEJ KOMUNITI BANDAR PENAWAR</h4>
+                     <span><strong>5.</strong> SEPTEMBER 2019</span>
+                     <h4>ROAD TO SUCCESS(R2S): ICT JOB CHALLENGE AND DEMAND IN IR 4.0</h4>
                   </div>
                   <div class="work-img pop" style="height: 280px;">
-                     <img src="images/IMG_0683.jpg" class="img-fluid " alt="...">
+                     <img src="images/talk2.jpg" class="img-fluid " alt="...">
                   </div>
                   <div class="work-content">
-                     <p class="lead">Sharing Knowledge and experience to students Sekolah Menengah Bandar Penawar at Dewan Utama Kolej Komuniti Bandar Penawar with Alumni student Kolej Komuniti. </p>
+                     <p class="lead">Sharing Knowledge and experience to all junior student Semester 1 and 2 about ICT job chanllenge and Demand in IR 4.0.</p>
                   </div>
                </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12 d-flex pb-3 wow slideInRight" data-wow-duration="2s">
                <div class="work-box bg-transparent">
                   <div class="work-content">
-                     <span><strong>2.</strong> DECEMBER 2018 <span data-feather='award'></span></span>
+                     <span><strong>2.</strong> JANUARY 2019 <span data-feather='award'></span></span>
                      <h4>TALK SESSION AT POLITEKNIK MERSING, JOHOR</h4>
                   </div>
                   <div class="work-img pop" style="height: 280px;">
@@ -289,25 +289,10 @@
                   </div>
                </div>
             </div>
-
-            <div class="col-lg-6 col-md-6 col-sm-12 d-flex pb-3 wow slideInLeft" data-wow-duration="2s">
-               <div class="work-box bg-transparent">
-                  <div class="work-content">
-                     <span><strong>3.</strong> DECEMBER 2018 <span data-feather='award'></span></span>
-                     <h4>TALK SESSION AT KOLEJ KOMUNITI CAWANGAN GELANG PATAH, JOHOR</h4>
-                  </div>
-                  <div class="work-img pop" style="height: 280px;">
-                     <img src="images/IMG_8837.jpg" class="img-fluid " alt="...">
-                  </div>
-                  <div class="work-content">
-                     <p class="lead">Sharing Knowledge, experience and tips to all junior student at Kolej Komuniti cawangan Gelang Patah, Johor.</p>
-                  </div>
-               </div>
-            </div>
             <div class="col-lg-6 col-md-6 col-sm-12 d-flex pb-3 wow slideInRight" data-wow-duration="2s">
                <div class="work-box bg-transparent">
                   <div class="work-content">
-                     <span><strong>4.</strong> OKTOBER 2018 <span data-feather='award'></span></span>
+                     <span><strong>4.</strong> JANUARY 2019 <span data-feather='award'></span></span>
                      <h4>BLACK LINE PRO ROBOTS TRAINING AT POLITEKNIK MERSING, JOHOR</h4>
                   </div>
                   <div class="work-img pop" style="height: 280px;">
@@ -321,14 +306,28 @@
             <div class="col-lg-6 col-md-6 col-sm-12 d-flex pb-3 wow slideInLeft" data-wow-duration="2s">
                <div class="work-box bg-transparent">
                   <div class="work-content">
-                     <span><strong>5.</strong> OKTOBER 2018</span>
-                     <h4>ROAD TO SUCCESS(R2S): ICT JOB CHALLENGE AND DEMAND IN IR 4.0</h4>
+                     <span><strong>1.</strong> OCTOBER 2018 </span>
+                     <h4>FORUM WITH ALUMNI KOLEJ KOMUNITI BANDAR PENAWAR</h4>
                   </div>
                   <div class="work-img pop" style="height: 280px;">
-                     <img src="images/talk2.jpg" class="img-fluid " alt="...">
+                     <img src="images/IMG_0683.jpg" class="img-fluid " alt="...">
                   </div>
                   <div class="work-content">
-                     <p class="lead">Sharing Knowledge and experience to all junior student Semester 1 and 2 about ICT job chanllenge and Demand in IR 4.0.</p>
+                     <p class="lead">Sharing Knowledge and experience to students Sekolah Menengah Bandar Penawar at Dewan Utama Kolej Komuniti Bandar Penawar with Alumni student Kolej Komuniti. </p>
+                  </div>
+               </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 d-flex pb-3 wow slideInLeft" data-wow-duration="2s">
+               <div class="work-box bg-transparent">
+                  <div class="work-content">
+                     <span><strong>3.</strong> JUNE 2018 <span data-feather='award'></span></span>
+                     <h4>TALK SESSION AT KOLEJ KOMUNITI CAWANGAN GELANG PATAH, JOHOR</h4>
+                  </div>
+                  <div class="work-img pop" style="height: 280px;">
+                     <img src="images/IMG_8837.jpg" class="img-fluid " alt="...">
+                  </div>
+                  <div class="work-content">
+                     <p class="lead">Sharing Knowledge, experience and tips to all junior student at Kolej Komuniti cawangan Gelang Patah, Johor.</p>
                   </div>
                </div>
             </div>

@@ -59,15 +59,16 @@
                <div class="col-12 wow slideInUp " data-wow-duration="2s">
                   <div class="row ">
                      <div class="col">
-                        <a class="font-1 color-7" href="#">{{ Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $getPost->created_at)->format('M d, Y') }}</a>
+                        <a class="font-1 color-7" href="#">{{ Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $getPost->datepost)->format('M d, Y') }}</a>
                      </div>
                   </div>
                   <h4 class="mt-2">{{ $getPost->title }}</h4>
                   <img class="d-block mt-3 w-100" src="{{ asset('images/' . $getPost->image) }}" alt="" width="100%">
-                  <p class="mt-1 "><small>{{ $getPost->desc }}</small></p>
+                   <p>{{ Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $getPost->datepost)->format('M d, Y h:i a') }} | <span data-feather='eye' style="width: 16px;"></span><small>&nbsp;{{ $getPost->visitor != 0 ? $getPost->visitor : '0' }}</small></p>
                   <!-- Content Post --> 
                   {{ $getPost->content }}
                   <!-- End Content Post -->
+
                   <div class="row mt-5 fs-1 align-items-center">
                      <div class="col-auto">
                         <h6 class="mb-0">Share on</h6>

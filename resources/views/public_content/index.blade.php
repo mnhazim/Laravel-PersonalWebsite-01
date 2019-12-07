@@ -21,6 +21,9 @@
          <div class="col-lg-4 mx-auto text-center text-white">
             <div class="font-italictext-white">
                <p class="text-center" style="font-size: 30px;font-family: bauhaus;">{{ $owner->scndsub }}</p>
+               <a class="btn btn-outline-light btn-sm" href="{{ Route('about') }}">ABOUT ME</a>
+               <a class="btn btn-outline-light btn-sm" href="{{ Route('history') }}">ABOUT WEBSITE</a>
+               
             </div>
          </div>
       </div>

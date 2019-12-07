@@ -17,26 +17,26 @@ class ContentController extends Controller
         $quote = DB::table('mnh_quotes')->where('status', 1)->get();
         $owner = DB::table('mnh_owner')->first();
         $activity = DB::table('mnh_post')
-                        ->select(DB::raw('mnh_post.*,mnh_post.created_at as datepost,mnh_post.title as title, mnh_post.image as image, mnh_post.id as postid'))
+                        ->select(DB::raw('mnh_post.*,mnh_post.datepost as datepost,mnh_post.title as title, mnh_post.image as image, mnh_post.id as postid'))
                         ->leftJoin('mnh_lookup_var', 'mnh_post.id_var', '=', 'mnh_lookup_var.id')
                         ->where('mnh_lookup_var.id', 1)
-                        ->orderBy('mnh_post.created_at', 'desc')
+                        ->orderBy('mnh_post.datepost', 'desc')
                         ->limit(4)
                         ->get();
 
         $sharings = DB::table('mnh_post')
-                        ->select(DB::raw('mnh_post.*,mnh_post.created_at as datepost,mnh_post.title as title, mnh_post.image as image, mnh_post.id as postid'))
+                        ->select(DB::raw('mnh_post.*,mnh_post.datepost as datepost,mnh_post.title as title, mnh_post.image as image, mnh_post.id as postid'))
                         ->leftJoin('mnh_lookup_var', 'mnh_post.id_var', '=', 'mnh_lookup_var.id')
                         ->where('mnh_lookup_var.id', 2)
-                        ->orderBy('mnh_post.created_at', 'desc')
+                        ->orderBy('mnh_post.datepost', 'desc')
                         ->limit(3)
                         ->get();
                         
         $portfolios = DB::table('mnh_post')
-                        ->select(DB::raw('mnh_post.*,mnh_post.created_at as datepost'))
+                        ->select(DB::raw('mnh_post.*,mnh_post.datepost as datepost'))
                         ->leftJoin('mnh_lookup_var', 'mnh_post.id_var', '=', 'mnh_lookup_var.id')
                         ->where('mnh_lookup_var.id', 3)
-                        ->orderBy('mnh_post.created_at', 'desc')
+                        ->orderBy('mnh_post.datepost', 'desc')
                         ->limit(4)
                         ->get();
 
@@ -104,6 +104,11 @@ class ContentController extends Controller
     public function postActivity($id){
         $detailActivity = mnh_lookup_var::where('id', 1)->firstOrFail();
         $getPost = mnh_post::findorfail($id);
+        if($getPost){
+            $getPost->visitor = $getPost->visitor+ 1;
+            $getPost->save();
+        }
+
         $topHit     = $this->getTopHit($detailActivity->id, 2);
         $randomAct  = $this->getRanCategory(3,array(1,2));
         $listTagAct = $this->getLookupVar(array(1,2));
@@ -116,7 +121,7 @@ class ContentController extends Controller
         $getSharing = DB::table('mnh_post as a')
                 ->select(DB::raw('a.*, b.title as typepost'))
                 ->leftJoin('mnh_lookup_var as b', 'a.id_var' , 'b.id')
-                ->where('b.id', 1)
+                ->where('b.id', 2)
                 ->orderBy('a.created_at', 'desc')
                 ->paginate(3);
 
@@ -143,10 +148,10 @@ class ContentController extends Controller
                 ->select(DB::raw('a.*, b.title as typepost, b.code as code'))
                 ->leftJoin('mnh_lookup_var as b', 'a.id_var' , 'b.id')
                 ->whereIn('a.id_var', $idmst)
+                ->limit($limit)
                 ->get();
 
         if (!$data->isEmpty()) {
-            $data = $data->random($limit);
             return $data;
         } else {
             return 0;

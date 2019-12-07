@@ -22,6 +22,7 @@
             <th>Code <small class="text-danger">(Options)</small></th>
             <th>Title</th>
             <th>Thumbnail</th>
+            <th>Img Name</th>
             <th>Link</th>
             <th>Action</th>
          </tr>
@@ -40,6 +41,11 @@
               -
               @endif
             </td>
+             @if($list->varimg != '')
+            <td>{{ $list->varimg }}</td>
+            @else
+            <td>-</td>
+            @endif
             <td>{{ $list->varlink != '' ? $list->varlink : '-' }}</td>
             <td>
                <form class="btn-group mr-2" method="post" action="/admin/lookupvar/delete/{{ $list->varid }}">

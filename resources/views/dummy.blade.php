@@ -1,182 +1,129 @@
 @extends('master_public.app')
 @section('content')
 <!-- 1 SECTION START -->
-<section class="py-0 wow">
-   <div class="container" id="home" style="padding-top: 4.5rem;padding-bottom: 4.5rem;">
-      <div class="row align-items-center wow slideInDown">
-         <div class="col-lg-12 mx-auto text-center m-4">
-            <a href="{{ Route('home') }}" class="btn btn-outline-dark btn-sm">Home Page</a>
+<style type="text/css">
+   .background-holder {
+   position: absolute;
+   width: 100%;
+   min-height: 100%;
+   top: 0;
+   left: 0;
+   background-size: cover;
+   background-position: center;
+   z-index: -1;
+   overflow: hidden;
+   will-change: transform, opacity, filter;
+   -webkit-backface-visibility: hidden;
+   backface-visibility: hidden;
+   background-repeat: no-repeat;
+   }
+</style>
+<section class="py-0" id="header-split-static">
+   <div class="container-fluid wow">
+      <div class="row" style="height: 50vh">
+         <div class="col-lg-6 px-0 order-lg-2 wow slideInRight " data-wow-duration="2s">
+            <div class="background-holder" style="background-image: url(/../images/1573901399.jpg); filter: blur(0px); opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);" > </div>
          </div>
-      </div>
-      <div class="row align-items-center "  id="vantabird">
-         <div class="col-sm-12 col-lg-10 col-xl-4 text-xl-right mt-5 mt-xl-0 order-lg-1 order-2 pr-xl-4 wow slideInLeft" data-wow-duration="2s" >
-            <div class="overflow-hidden">
-               <h5>Welcome to,</h5>
-               <H3 class="mb-3" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">MNHAZIM.COM</H3>
-            </div>
-         </div>
-         <div class="pop col-sm-12 col-lg-5 col-xl-4 mt-4 mt-xl-0 px-xl-4 order-lg-2 wow slideInUp " data-wow-duration="2s"> 
-            <img class="w-100 radius-primary" src="images/default.png" alt="" style="filter: blur(0px); opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-         </div>
-         <div class="col-sm-12 col-lg-5 col-xl-4 mt-5 mt-xl-0 order-3 align-self-lg-start align-self-xl-center pl-xl-4 wow slideInRight" data-wow-duration="2s">
-         </div>
-      </div>
-   </div>
-</section>
-<section class="wow" id="default-process">
-   <div class="container">
-      <div class="row justify-content-center text-center mb-6">
-      <div class="col-lg-6 wow slideInUp" data-wow-duration="2s">
-         <h1 class="display-4 ">INTODUCTION</h1>
-         <hr class="short mt-4 border-secondary">
-      </div>
-   </div>
-   <div class="row align-items-middle mb-4">
-      <div class="col-lg-6 text-center wow slideInUp" data-wow-duration="2s">
-         <!-- <h1 class="display-4 ">EXPERIENCE</h1> -->
-         <img src="images/intro.png" alt="" width="100%">
-      </div>
-      <div class="col-lg-6 mt-4 mt-lg-0 mb-8 mb-lg-0 my-lg-8">
-         <div class="py-2 wow slideInLeft" data-wow-duration="2s">
-            <h4 class="lead text-justify">This is my first <strong>customize personal website</strong>. Im using <strong>Bootsrap 4</strong> for my UI(User Interface) Library and <strong>Laravel 6</strong> (PHP Framework) for my backend process. I implemented animation and transition for this website using <strong>animate.css</strong> and <strong>wow js</strong> library. I try to implement <strong>CMS (Content Management System)</strong> for this website, currently only 60% data fetch from Database and 40% hardcoded (In planning to make 100% data fetch from DB). </h4>
-            <center><div class="d-inline px-2">
-               <a href=""  target="_blank" data-toggle="tooltip" data-placement="bottom" title="">
-                  <img src="images/1573400603.png" class="rounded mb-2" alt="..." height="60">
-               </a>
-               <a href=""  target="_blank" data-toggle="tooltip" data-placement="bottom" title="">
-                  <img src="images/1573400675.png" class="rounded mb-2" alt="..." height="60">
-               </a>
-               <a href=""  target="_blank" data-toggle="tooltip" data-placement="bottom" title="">
-                  <img src="images/1573400649.png" class="rounded mb-2" alt="..." height="60">
-               </a>
-               <a href=""  target="_blank" data-toggle="tooltip" data-placement="bottom" title="">
-                  <img src="images/1573400501.png" class="rounded mb-2" alt="..." height="60">
-               </a>
-               <a href=""  target="_blank" data-toggle="tooltip" data-placement="bottom" title="">
-                  <img src="images/1573400572.png" class="rounded mb-2" alt="..." height="60">
-               </a>
-               <a href=""  target="_blank" data-toggle="tooltip" data-placement="bottom" title="">
-                  <img src="images/1574446547.jpg" class="rounded mb-2" alt="..." height="60">
-               </a>
-               <a href=""  target="_blank" data-toggle="tooltip" data-placement="bottom" title="">
-                  <img src="images/1574573272.jpg" class="rounded mb-2" alt="..." height="60">
-               </a>
-               <a href=""  target="_blank" data-toggle="tooltip" data-placement="bottom" title="">
-                  <img src="images/1573399874.png" class="rounded mb-2" alt="..." height="60">
-               </a>
-            </div></center>
-         </div>
-      </div>
-   </div>
-   <div class="row justify-content-center text-center mb-6 wow slideInDown">
-      <div class="col-lg-6">
-         <h1 class="display-4 wow slideInUp" data-wow-duration="2s">PLAN</h1>
-         <hr class="short mt-4 border-secondary">
-      </div>
-   </div>
-   <div class="row py-2 mb-4">
-      <div class="col-12">
-         <div class="row align-items-center">
-            <div class="col-lg-6 order-lg-2 text-center wow slideInDown" data-wow-duration="2s">
-               <img src="images/plan.png" alt="" width="100%">
-            </div>
-            <div class="col-lg-6 pb-lg-8 mt-4 mt-lg-0 mb-8 mb-lg-0">
-               <div class="py-2 wow slideInLeft" data-wow-duration="2s">
-                  <h4 class="lead text-justify">Planning and analysis are important things before I start develop something. First, I collect all information,portfolio and any resources like design modern website(Pinterest/UI UX Instagram), example personal website, database structure for CMS (Basic CMS part). After that, I draft my storyboard and my database structure before I start design my first UI in Adobe XD. Draft database structure you must thing about flow, and the important thing how CMS work. MNH is my prefix table.</h4>
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
-   <div class="row justify-content-center text-center mb-6">
-      <div class="col-lg-6 wow slideInUp" data-wow-duration="2s">
-         <h1 class="display-4 ">DESIGN</h1>
-         <hr class="short mt-4 border-secondary">
-      </div>
-   </div>
-   <div class="row align-items-middle mb-4">
-      <div class="col-lg-6 text-center wow slideInUp" data-wow-duration="2s">
-         <!-- <h1 class="display-4 ">EXPERIENCE</h1> -->
-         <img src="images/design.png" alt="" width="100%">
-      </div>
-      <div class="col-lg-6 mt-4 mt-lg-0 mb-8 mb-lg-0 my-lg-8">
-         <div class="py-2 wow slideInLeft" data-wow-duration="2s">
-            <h4 class="lead">After I complete collect all information and flow database structre, I start design my first UI in Adobe XD. Currently for this UI is my second design. Designing is not easy because you must being creative and know about modern design. I follow many resources in UI/UX Designer in Facebook, Instagram, Pinterest and etc to get Idea for design my website. I take 5 days to finish my first design. </h4>
-            <div class="d-inline px-2 ">
-               
-               <a href=""  target="_blank" data-toggle="tooltip" data-placement="bottom" title="">
-                  <img src="images/1573400721.png" class="rounded mb-2" alt="..." height="60">
-               </a>
-               <a href=""  target="_blank" data-toggle="tooltip" data-placement="bottom" title="">
-                  <img src="images/1573400841.png" class="rounded mb-2" alt="..." height="60">
-               </a>
-               <a href=""  target="_blank" data-toggle="tooltip" data-placement="bottom" title="">
-                  <img src="images/1573400905.png" class="rounded mb-2" alt="..." height="60">
-               </a>
-            </div>
-         </div>
-      </div>
-   </div>
-   <div class="row justify-content-center text-center mb-6">
-      <div class="col-lg-6 wow slideInUp" data-wow-duration="2s">
-         <h1 class="display-4 ">DEVELOP</h1>
-         <hr class="short mt-4 border-secondary">
-      </div>
-   </div>
-   <div class="row py-2 mb-4">
-      <div class="col-12">
-         <div class="row align-items-center">
-            <div class="col-lg-6 order-lg-2 text-center wow slideInDown" data-wow-duration="2s">
-               <img src="images/develop.png" alt="" width="100%">
-            </div>
-            <div class="col-lg-6 pb-lg-8 mt-4 mt-lg-0 mb-8 mb-lg-0">
-               <div class="py-2 wow slideInLeft" data-wow-duration="2s">
-                  <h4 class="lead">Before I start write my code. I draft my folder directory like private part, public part, master part and etc. Seprate folder make my work more efficient and easy to trace. Next, I start project using laragon and write my code on Sublime Text 3 for my code editor and HeidiSQL for my database manager. I use Git to push my code on github if any modified or any process going. </h4>
-                  <div class="d-inline px-2 ">
-                     
-                     <a href=""  target="_blank" data-toggle="tooltip" data-placement="bottom" title="">
-                        <img src="images/1573400752.png" class="rounded mb-2" alt="..." height="60">
+         <div class="col-lg-6 wow slideInLeft " data-wow-duration="2s">
+            <div class="row h-100 align-items-center justify-content-center">
+               <div class="col-lg-10 py-6 py-lg-8">
+                  <h1 class="fw-300 text-uppercase fs-2 fs-sm-4">
+                     <a href="{{ Route('home') }}">
+                        <div class="overflow-hidden">
+                           <img src="{{ asset('images/icon/i_logoH.png') }}" width="50">
+                        </div>
                      </a>
-                     <a href=""  target="_blank" data-toggle="tooltip" data-placement="bottom" title="">
-                        <img src="images/hedi.png" class="rounded mb-2" alt="..." height="60">
-                     </a>
-                     <a href=""  target="_blank" data-toggle="tooltip" data-placement="bottom" title="">
-                        <img src="images/git.png" class="rounded mb-2" alt="..." height="60">
-                     </a>
-                     <a href=""  target="_blank" data-toggle="tooltip" data-placement="bottom" title="">
-                        <img src="images/laragon.jpg" class="rounded mb-2" alt="..." height="60">
-                     </a>
+                     <div class="overflow-hidden">
+                        <span class="d-block mt-2" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">DUMMY TITLE</span>
+                     </div>
+                  </h1>
+                  <div class="overflow-hidden">
+                     <h6 class="text-uppercase mt-4" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">DUMMY SECOND TITLE</h6>
+                  </div>
+                  <div style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+                     <a class="btn btn-outline-secondary btn-sm mt-1" href="{{ Route('home') }}">Home</a>
                   </div>
                </div>
             </div>
          </div>
       </div>
+      <!--/.row-->
    </div>
-   <div class="row justify-content-center text-center mb-6">
-      <div class="col-lg-10 wow slideInUp" data-wow-duration="2s">
-         <h1 class="display-4 ">DEPLOY</h1>
-         <hr class="short mt-4 border-secondary">
-      </div>
-   </div>
-   <div class="row align-items-middle mb-4">
-      <div class="col-lg-6 text-center wow slideInLeft" data-wow-duration="2s">
-         <!-- <h1 class="display-4 ">EXPERIENCE</h1> -->
-         <img src="images/deploy.png" alt="" width="100%">
-      </div>
-      <div class="col-lg-6 mt-4 mt-lg-0 mb-8 mb-lg-0 my-lg-8">
-         <div class="py-2 wow slideInRight" data-wow-duration="2s">
-            <h4 class="lead">for this application, Im using shared hosting from jimathosting provider to deploy my application. CPanel to manage/configure my server then I use File Zilla (FTP) To transfer file from local to server. </h4>
-            <div class="d-inline px-2 ">
-               
-               <a href=""  target="_blank" data-toggle="tooltip" data-placement="bottom" title="">
-                  <img src="images/1573400957.png" class="rounded mb-2" alt="..." height="60">
-               </a>
-               <a href=""  target="_blank" data-toggle="tooltip" data-placement="bottom" title="">
-                  <img src="images/cpanel.png" class="rounded mb-2" alt="..." height="60">
-               </a>
+   <!--/.container-->
+</section>
+<section>
+   <div class="container wow">
+      <div class="row mt-4">
+         <div class="col-lg-8 ">
+            <div class="row mb-3">
+               <div class="col-12 wow slideInUp " data-wow-duration="2s">
+                  <div class="row ">
+                     <div class="col">
+                        <a class="font-1 color-7" href="">27-01-2019</a>
+                     </div>
+                  </div>
+                  <h4 class="mt-2">Post Title</h4>
+                  <img class="d-block mt-3 w-100" src="{{ asset('images/bg1.jpg') }}" alt="" width="100%">
+                  <p class="mt-1 "><small>Post Desc</small></p>
+                  <!-- Content Post --> 
+                  Post Content
+                  <!-- End Content Post -->
+                  <div class="row mt-5 fs-1 align-items-center">
+                     <div class="col-auto">
+                        <h6 class="mb-0">Share on</h6>
+                     </div>
+                  </div>
+                  <div id="share"></div>
+               </div>
+               <div class="col-12 mt-8">
+                  <h4 class="mb-4">More from Web design</h4>
+               </div>
+               <div class="col-sm-6 col-lg-4 wow slideInUp " data-wow-duration="2s" >
+                  <a href="">
+                     <img class="w-100 radius-primary" src="{{ asset('images/bg1.jpg') }}" width="100%" alt="" style="filter: blur(0px); opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+                     <h6 class="d-inline-block ls fw-500 mb-0 mt-3 color-6">TYPE DUMMY</h6>
+                     <h5>DUMMY TITLE</h5>
+                  </a>
+               </div>
+               <div class="col-sm-6 col-lg-4 wow slideInUp " data-wow-duration="2s" >
+                  <a href="">
+                     <img class="w-100 radius-primary" src="{{ asset('images/bg1.jpg') }}" width="100%" alt="" style="filter: blur(0px); opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+                     <h6 class="d-inline-block ls fw-500 mb-0 mt-3 color-6">TYPE DUMMY</h6>
+                     <h5>DUMMY TITLE</h5>
+                  </a>
+               </div>
+            </div>
+         </div>
+         <div class="col-lg-4 mt-6 mt-lg-0 pl-lg-7">
+            <div class="row px-2">
+               <div class="col">
+                  <h5 class="mt-5">Popular</h5>
+                  <div class="wow slideInRight " data-wow-duration="2s">
+                     <a href="">
+                     <img class="mt-3 radius-primary" src="{{ asset('images/bg1.jpg') }}" width="100%" alt="">
+                     <h6 class="fs-0 mt-3">Title</h6>
+                  </a>
+                  </div><div class="wow slideInRight " data-wow-duration="2s">
+                     <a href="">
+                     <img class="mt-3 radius-primary" src="{{ asset('images/bg1.jpg') }}" width="100%" alt="">
+                     <h6 class="fs-0 mt-3">Title</h6>
+                  </a>
+                  </div>
+                  <div class="mt-6">
+                     <h5>Categories</h5>
+                     <ul class="nav tags mt-3 fs--1">
+                         <li  class="wow slideInUp " data-wow-duration="2s">
+                           <a class="btn btn-sm btn-outline-secondary m-1" href="">DUMMY</a>
+                        </li><li  class="wow slideInUp " data-wow-duration="2s">
+                           <a class="btn btn-sm btn-outline-secondary m-1" href="">DUMMY</a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
             </div>
          </div>
       </div>
+      <!--/.row-->
    </div>
    <!--/.container-->
 </section>

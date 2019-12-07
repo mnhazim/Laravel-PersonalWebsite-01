@@ -3,7 +3,7 @@
 <div class="border-bottom mt-2">
    <h1 class="h2">Add New Post</h1>
 </div>
-<div class="row">
+<div class="row my-3">
    <div class="col-lg-8 col-md-8 col-sm-12 mx-auto">
       @if ($errors->any())
           <div class="alert alert-danger">
@@ -31,10 +31,14 @@
                </select>
             </div>
             <div class="form-group col-md-6">
+               <label>Date Post</label>
+               <input type="datetime-local" class="form-control" placeholder="title" name="datepost">
+            </div>
+         </div>
+         <div class="form-group">
                <label>Title</label>
                <input type="text" class="form-control" placeholder="title" name="title">
             </div>
-         </div>
          <div class="form-group">
             <label >Desc</label>
             <textarea class="form-control" rows="5" name="desc"></textarea>

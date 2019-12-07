@@ -26,9 +26,13 @@
       <form class="mt-3" method="post" action="/admin/post/edit/{{ $posts->id }}" enctype="multipart/form-data">
          @csrf
          <div class="form-row">
-            <div class="form-group col-md-12">
+            <div class="form-group col-md-7">
                <label for="inputEmail4">Title</label>
                <input type="text" class="form-control" value="{{ $posts->title }}" name="title">
+            </div>
+            <div class="form-group col-md-5">
+               <label for="inputEmail4">Date Post</label>
+               <input type="datetime-local" class="form-control" value="{{ date('Y-m-d\TH:i:s',strtotime($posts->datepost)) }}" name="datepost">
             </div>
          </div>
          <div class="form-group">

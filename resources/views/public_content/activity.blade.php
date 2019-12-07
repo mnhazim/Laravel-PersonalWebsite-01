@@ -127,14 +127,13 @@
          <div class="col-lg-12 py-2">
             <h3>Other Category</h3>
          </div>
-         @if($randomAct > 0)
+         @if(count($randomAct) > 0)
          @foreach($randomAct as $ranlist)
          <div class="col-sm-6 col-lg-3 wow slideInUp "  data-wow-duration="2s">
             <a href="/{{ $ranlist->code . '/' . $ranlist->id }}">
                <img class="w-100 radius-primary" src="{{ asset('images/'. $ranlist->image) }}" width="100%" alt="" style="filter: blur(0px); opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
                <h6 class="d-inline-block ls fw-500 mb-0 mt-3 color-6">{{ $ranlist->typepost }}</h6>
                <h5>{{ $ranlist->title }}</h5>
-               <p class="color-5 d-inline-block">{{ $ranlist->desc }}</p>
             </a>
          </div>
          @endforeach
