@@ -62,7 +62,7 @@
             @foreach($getActivity as $listActivity)
             <div class="mb-4 border-bottom wow slideInUp " data-wow-duration="2s">
                <img class="d-block w-100 mb-2 radius-primary" src="{{ asset('images/' . $listActivity->image) }}" alt="" width="100%">
-               <a class="font-1 color-7" href="/activity/{{ $listActivity->id }}">{{ Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $listActivity->created_at)->format('M d, Y') }}</a>
+               <a class="font-1 color-7" href="/activity/{{ $listActivity->id }}">{{ Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $listActivity->datepost)->format('M d, Y') }}</a>
                <a href="/activity/{{ $listActivity->id }}">
                   <h4>{{ $listActivity->title }}</h4>
                </a>
@@ -129,7 +129,7 @@
          </div>
          @if(count($randomAct) > 0)
          @foreach($randomAct as $ranlist)
-         <div class="col-sm-6 col-lg-3 wow slideInUp "  data-wow-duration="2s">
+         <div class="col-sm-6 col-lg-3 wow slideInLeft "  data-wow-duration="2s">
             <a href="/{{ $ranlist->code . '/' . $ranlist->id }}">
                <img class="w-100 radius-primary" src="{{ asset('images/'. $ranlist->image) }}" width="100%" alt="" style="filter: blur(0px); opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
                <h6 class="d-inline-block ls fw-500 mb-0 mt-3 color-6">{{ $ranlist->typepost }}</h6>

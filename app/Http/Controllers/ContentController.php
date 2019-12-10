@@ -65,7 +65,7 @@ class ContentController extends Controller
                 ->select(DB::raw('a.*, b.title as typepost'))
                 ->leftJoin('mnh_lookup_var as b', 'a.id_var' , 'b.id')
                 ->where('b.code', $code)
-                ->orderBy('a.created_at', 'desc')
+                ->orderBy('a.datepost', 'desc')
                 ->paginate(3);
 
         $randomCat  = $this->getRanCategory(4,array(4,5,6,7,8));
@@ -91,7 +91,7 @@ class ContentController extends Controller
                 ->select(DB::raw('a.*, b.title as typepost'))
                 ->leftJoin('mnh_lookup_var as b', 'a.id_var' , 'b.id')
                 ->where('b.id', 1)
-                ->orderBy('a.created_at', 'desc')
+                ->orderBy('a.datepost', 'desc')
                 ->paginate(3);
 
          $randomAct  = $this->getRanCategory(4,array(1,2));
@@ -122,7 +122,7 @@ class ContentController extends Controller
                 ->select(DB::raw('a.*, b.title as typepost'))
                 ->leftJoin('mnh_lookup_var as b', 'a.id_var' , 'b.id')
                 ->where('b.id', 2)
-                ->orderBy('a.created_at', 'desc')
+                ->orderBy('a.datepost', 'desc')
                 ->paginate(3);
 
          $randomAct  = $this->getRanCategory(4,array(1,2));
