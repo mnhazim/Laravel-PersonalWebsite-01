@@ -92,7 +92,7 @@ class ContentController extends Controller
                 ->leftJoin('mnh_lookup_var as b', 'a.id_var' , 'b.id')
                 ->where('b.id', 1)
                 ->orderBy('a.datepost', 'desc')
-                ->paginate(3);
+                ->paginate(5);
 
          $randomAct  = $this->getRanCategory(4,array(1,2));
          $topHit     = $this->getTopHit($detailActivity->id, 2);
@@ -133,8 +133,13 @@ class ContentController extends Controller
     }
 
     public function postSharing($id){
-        $detailSharing = mnh_lookup_var::where('id', 1)->firstOrFail();
+        $detailSharing = mnh_lookup_var::where('id', 2)->firstOrFail();
         $getPost = mnh_post::findorfail($id);
+        if($getPost){
+            $getPost->visitor = $getPost->visitor+ 1;
+            $getPost->save();
+        }
+
         $topHit     = $this->getTopHit($detailSharing->id, 2);
         $randomAct  = $this->getRanCategory(3,array(1,2));
         $listTagAct = $this->getLookupVar(array(1,2));
@@ -148,11 +153,10 @@ class ContentController extends Controller
                 ->select(DB::raw('a.*, b.title as typepost, b.code as code'))
                 ->leftJoin('mnh_lookup_var as b', 'a.id_var' , 'b.id')
                 ->whereIn('a.id_var', $idmst)
-                ->limit($limit)
                 ->get();
 
         if (!$data->isEmpty()) {
-            return $data;
+            return $data->random($limit);
         } else {
             return 0;
         }

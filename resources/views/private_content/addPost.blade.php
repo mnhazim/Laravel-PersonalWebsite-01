@@ -23,7 +23,7 @@
          <div class="form-row">
             <div class="form-group col-md-6">
                <label >Type of Post</label>
-               <select class="form-control" name="typepost">
+               <select class="form-control" name="typepost" required>
                   <option value="">Select..</option>
                   @foreach($listtypepost as $typepost)
                      <option value="{{ $typepost->id }}">{{ $typepost->title }}</option>
@@ -37,20 +37,20 @@
          </div>
          <div class="form-group">
                <label>Title</label>
-               <input type="text" class="form-control" placeholder="title" name="title">
+               <input type="text" class="form-control" placeholder="title" name="title" required>
             </div>
          <div class="form-group">
             <label >Desc</label>
-            <textarea class="form-control" rows="5" name="desc"></textarea>
+            <textarea class="form-control" rows="5" name="desc" required></textarea>
          </div>
          <div class="form-group">
             <label >Content</label>
-            <textarea class="form-control" rows="5" name="content"></textarea>
+            <textarea class="form-control" rows="5" name="content" required></textarea>
          </div>
          <div class="form-row">
             <div class="form-group col-md-4">
                <label >Place</label>
-               <select class="form-control" name="place">
+               <select class="form-control" name="place" required>
                   <option value="">Select..</option>
                   @foreach($listplace as $place)
                      <option value="{{ $place->id }}">{{ $place->title }}</option>
@@ -59,7 +59,7 @@
             </div>
             <div class="form-group col-md-4">
                <label >Status</label>
-               <select class="form-control" name="status">
+               <select class="form-control" name="status" required>
                   @foreach($liststatus as $status)
                      <option value="{{ $status->code }}">{{ $status->title }}</option>
                   @endforeach
@@ -68,12 +68,12 @@
             <div class="form-group col-md-4">
                <label >Thumbail</label>
                <div class="custom-file">
-                  <input type="file" class="custom-file-input" id="customFile" name="image">
+                  <input type="file" class="custom-file-input" id="customFile" name="image" required>
                   <label class="custom-file-label" >Thumbnail</label>
                </div>
             </div>
          </div>
-         <button type="submit" class="btn btn-primary">Submit</button>
+         <button type="submit" onclick="return confirm('Are you sure ?')" class="btn btn-primary">Submit</button>
       </form>
    </div>
 </div>

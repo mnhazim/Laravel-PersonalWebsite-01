@@ -77,7 +77,7 @@
                   <div id="share"></div>
                </div>
                <div class="col-12 mt-8">
-                  <h4 class="mb-4">More from Web design</h4>
+                  <h4 class="mb-4">Other Activity</h4>
                </div>
                @foreach($randomAct as $ranlist)
                <div class="col-sm-6 col-lg-4 wow slideInLeft " data-wow-duration="3s">

@@ -55,6 +55,9 @@ class PrivateController extends Controller
             'image' => 'image|mimes:jpeg,png,jpg'
         ]);
 
+        //For Replace space with underscore
+        // $newpost = preg_replace('/\s+/', '_', Request('title'));
+
         $newpost = new Mnh_post;
         $newpost->id_var = Request('typepost');
         $newpost->title = Request('title');

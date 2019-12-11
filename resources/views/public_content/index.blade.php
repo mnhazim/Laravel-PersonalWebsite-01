@@ -118,7 +118,7 @@
          </div>
          <div class="row">
             <div class="col-lg-12 my-4">
-               <center><a href="/category" class="btn btn-outline-danger btn-sm">See More</a></center>
+               <!-- <center><a href="/category" class="btn btn-outline-danger btn-sm">See More</a></center> -->
             </div>
          </div>
       </div>
@@ -149,9 +149,9 @@
                <a href="/activity/{{ $listact->postid }}" data-lightbox="gallery-mf">
                   <div class="work-img">
                      @if($listact->image != '')
-                     <img src="{{ asset('images/' . $listact->image) }}" alt="" class="img-fluid" width="100%">
+                     <img src="{{ asset('images/' . $listact->image) }}" alt="" class="img-fluid" height="100%">
                      @else
-                     <img src="images/default.png" alt="" class="img-fluid" width="100%">
+                     <img src="images/default.png" alt="" class="img-fluid" height="100%">
                      @endif
                   </div>
                   <div class="work-content ">

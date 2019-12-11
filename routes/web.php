@@ -21,7 +21,9 @@ Route::get('/', 'ContentController@index')->name('home');
 Route::get('/aboutme', 'ContentController@about')->name('about');
 Route::get('/history', 'ContentController@history')->name('history');
 //--------- Category ---------
-//Route::get('/category', 'ContentController@mstCategory'); for display all category
+Route::get('/category', function(){
+	return redirect("/");
+});
 Route::get('/category/{code}', 'ContentController@category');
 Route::get('/category/{code}/{id}', 'ContentController@postCategory');
 
