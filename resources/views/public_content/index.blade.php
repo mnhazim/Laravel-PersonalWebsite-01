@@ -4,7 +4,7 @@
 <section class="py-0">
    <div class="container-fluid wow"  style="height: 100vh;background-color: black;" id="vantanet">
       <!-- Github Link -->
-      <div class="row mx-3 p-3 wow zoomInDown " data-wow-duration="3s" >
+      <div class="row mx-3 p-3 wow zoomInDown " data-wow-duration="2s" >
          <a class="col-lg-4 mx-auto text-white text-center d-flex justify-content-center p-1" href="https://github.com/mnhazim" target="_blank">
             <img class="px-1" src="images/github-logo.png" height="30">
             <h4 class="px-1" style="font-family: bauhaus">Github</h4>
@@ -17,13 +17,13 @@
             <small style="font-family: bauhaus;font-size: 20px;">{{ $owner->position }}</small>
          </div>
       </div>
-      <div class="row align-items-end h-25 wow zoomInUp " data-wow-duration="4s" >
+      <div class="row align-items-end h-25 wow zoomInUp " data-wow-duration="3s" >
          <div class="col-lg-4 mx-auto text-center text-white">
             <div class="font-italictext-white">
                <p class="text-center" style="font-size: 30px;font-family: bauhaus;">{{ $owner->scndsub }}</p>
                <a class="btn btn-outline-light btn-sm" href="{{ Route('about') }}">ABOUT ME</a>
                <a class="btn btn-outline-light btn-sm" href="{{ Route('history') }}">ABOUT WEBSITE</a>
-               
+               <p class="pt-1"><small>&nbsp;{!! $owner->visitor != '' ? number_format($owner->visitor, 0) : '0'!!}&nbsp;<span data-feather='eye' style="width: 15px;"></span></small></p>
             </div>
          </div>
       </div>
@@ -237,7 +237,7 @@
 </section>
 <!-- 5 SECTION END -->
 <!-- 6 SECTION START -->
-<section class="py-4 wow">
+<section class="py-4 wow" id="form">
    <div class="container wow" >
       <div class="row">
          <div class="col-lg-6 background-white py-6 py-lg-8 wow slideInLeft " data-wow-duration="2s" >
@@ -281,7 +281,7 @@
                            <h5 class="mb-2" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">Job Vacancy.</h5>
                         </div>
                         <div class="overflow-hidden">
-                           <p class="mb-0" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">'Life is a long <strong class="text-danger">journey</strong>, with problems to <strong class="text-danger">solve</strong>, lessons to <strong class="text-danger">learn</strong>, but most of all, experiences to <strong class="text-success">enjoy</strong>'.So, Hire me ?.</p>
+                           <p class="mb-0" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">'Life is a long <strong class="text-danger">journey</strong>, with problems to <strong class="text-danger">solve</strong>, lessons to <strong class="text-danger">learn</strong>, but most of all, experiences to <strong class="text-success">enjoy</strong>'. So, any job vacancy are available ?</p>
                         </div>
                      </div>
                   </div>
@@ -304,10 +304,10 @@
                   </div>
                   @endif
                   <h3 class="lh-1 fs-2 fs-md-3">Perfect for Students,
-                     <br>Beginner &amp; You.
+                     <br>Beginner &amp; Zero on Programming.
                   </h3>
                   <h6 class="text-success mt-3">I will response within 3 working days. ok?</h6>
-                  <form class="mt-5" method="post" action="{{ Route('formSubmit') }}">
+                  <form class="mt-5" method="post" action="{{ Route('formSubmit') }}" >
                      @csrf
                      <div class="row mb-4">
                         <div class="col">

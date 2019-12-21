@@ -264,70 +264,75 @@
             <div class="col-lg-6 col-md-6 col-sm-12 d-flex pb-3 wow slideInLeft" data-wow-duration="2s">
                <div class="work-box bg-transparent">
                   <div class="work-content">
-                     <span><strong>5.</strong> SEPTEMBER 2019</span>
-                     <h4>ROAD TO SUCCESS(R2S): ICT JOB CHALLENGE AND DEMAND IN IR 4.0</h4>
+                     <span><strong>1.</strong> {{ Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $tt[4]->datepost)->format('F d, Y') }}</span>
+                     <h4>{{ $tt[4]->title }}</h4>
                   </div>
                   <div class="work-img pop" style="height: 280px;">
-                     <img src="images/talk2.jpg" class="img-fluid " alt="...">
+                     <img src="{{ asset('images/' . $tt[4]->image) }}" class="img-fluid " alt="...">
                   </div>
                   <div class="work-content">
-                     <p class="lead">Sharing Knowledge and experience to all junior student Semester 1 and 2 about ICT job chanllenge and Demand in IR 4.0.</p>
+                     <p class="lead">{{ str_limit($tt[4]->desc, $limit = 150, $end = '...') }}</p>
+                     <a href="/activity/{{ $tt[4]->id }}" class="btn btn-link lead">Read More -></a>
                   </div>
                </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12 d-flex pb-3 wow slideInRight" data-wow-duration="2s">
                <div class="work-box bg-transparent">
                   <div class="work-content">
-                     <span><strong>2.</strong> JANUARY 2019 <span data-feather='award'></span></span>
-                     <h4>TALK SESSION AT POLITEKNIK MERSING, JOHOR</h4>
+                     <span><strong>2.</strong> {{ Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $tt[10]->datepost)->format('F d, Y') }}<span data-feather='award'></span></span>
+                     <h4>{{ $tt[10]->title }}</h4>
                   </div>
                   <div class="work-img pop" style="height: 280px;">
-                     <img src="images/try21.jpg" class="img-fluid " alt="...">
+                     <img src="{{ asset('images/' . $tt[10]->image) }}" class="img-fluid " alt="...">
                   </div>
                   <div class="work-content">
-                     <p class="lead">Sharing Knowledge, experience and tips about Final Year Project for all student Semester 4 Department Information Technolgy and Communication.</p>
+                     <p class="lead">{{ str_limit($tt[10]->desc, $limit = 150, $end = '...') }}</p>
+                     <a href="/activity/{{ $tt[10]->id }}" class="btn btn-link lead">Read More -></a>
+                  </div>
+               </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 d-flex pb-3 wow slideInLeft" data-wow-duration="2s">
+               <div class="work-box bg-transparent">
+                  <div class="work-content">
+                     <span><strong>3.</strong> {{ Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $tt[9]->datepost)->format('F d, Y') }}<span data-feather='award'></span></span>
+                     <h4>{{ $tt[9]->title }}</h4>
+                  </div>
+                  <div class="work-img pop" style="height: 280px;">
+                     <img src="{{ asset('images/' . $tt[9]->image) }}" class="img-fluid " alt="...">
+                  </div>
+                  <div class="work-content">
+                     <p class="lead">{{ str_limit($tt[9]->desc, $limit = 150, $end = '...') }}</p>
+                     <a href="/activity/{{ $tt[9]->id }}" class="btn btn-link lead">Read More -></a>
                   </div>
                </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12 d-flex pb-3 wow slideInRight" data-wow-duration="2s">
                <div class="work-box bg-transparent">
                   <div class="work-content">
-                     <span><strong>4.</strong> JANUARY 2019 <span data-feather='award'></span></span>
-                     <h4>BLACK LINE PRO ROBOTS TRAINING AT POLITEKNIK MERSING, JOHOR</h4>
+                     <span><strong>4.</strong> {{ Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $tt[6]->datepost)->format('F d, Y') }}</span>
+                     <h4>{{ $tt[6]->title }}</h4>
                   </div>
                   <div class="work-img pop" style="height: 280px;">
-                     <img src="images/TNXY8919.jpg" class="img-fluid " alt="...">
+                     <img src="{{ asset('images/' . $tt[6]->image) }}" class="img-fluid " alt="...">
                   </div>
                   <div class="work-content">
-                     <p class="lead">Training students about how to code Black Line Pro Robots (ROBO-ROBO) using C language at Politeknik Mersing, Johor.</p>
+                     <p class="lead">{{ str_limit($tt[6]->desc, $limit = 150, $end = '...') }}</p>
+                     <a href="/activity/{{ $tt[6]->id }}" class="btn btn-link lead">Read More -></a>
                   </div>
                </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12 d-flex pb-3 wow slideInLeft" data-wow-duration="2s">
                <div class="work-box bg-transparent">
                   <div class="work-content">
-                     <span><strong>1.</strong> OCTOBER 2018 </span>
-                     <h4>FORUM WITH ALUMNI KOLEJ KOMUNITI BANDAR PENAWAR</h4>
+                     <span><strong>5.</strong> {{ Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $tt[12]->datepost)->format('F d, Y') }}<span data-feather='award'></span></span>
+                     <h4>{{ $tt[12]->title }}</h4>
                   </div>
                   <div class="work-img pop" style="height: 280px;">
-                     <img src="images/IMG_0683.jpg" class="img-fluid " alt="...">
+                     <img src="{{ asset('images/' . $tt[12]->image) }}" class="img-fluid " alt="...">
                   </div>
                   <div class="work-content">
-                     <p class="lead">Sharing Knowledge and experience to students Sekolah Menengah Bandar Penawar at Dewan Utama Kolej Komuniti Bandar Penawar with Alumni student Kolej Komuniti. </p>
-                  </div>
-               </div>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-12 d-flex pb-3 wow slideInLeft" data-wow-duration="2s">
-               <div class="work-box bg-transparent">
-                  <div class="work-content">
-                     <span><strong>3.</strong> JUNE 2018 <span data-feather='award'></span></span>
-                     <h4>TALK SESSION AT KOLEJ KOMUNITI CAWANGAN GELANG PATAH, JOHOR</h4>
-                  </div>
-                  <div class="work-img pop" style="height: 280px;">
-                     <img src="images/IMG_8837.jpg" class="img-fluid " alt="...">
-                  </div>
-                  <div class="work-content">
-                     <p class="lead">Sharing Knowledge, experience and tips to all junior student at Kolej Komuniti cawangan Gelang Patah, Johor.</p>
+                     <p class="lead">{{ str_limit($tt[12]->desc, $limit = 150, $end = '...') }}</p>
+                     <a href="/activity/{{ $tt[12]->id }}" class="btn btn-link lead">Read More -></a>
                   </div>
                </div>
             </div>
@@ -350,210 +355,241 @@
             <div class="col-lg-6 col-md-6 col-sm-12 d-flex pb-3 wow slideInLeft" data-wow-duration="2s">
                <div class="work-box bg-transparent">
                   <div class="work-content">
-                     <span><strong>1.</strong> FEBRUARY 2019 </span>
-                     <h4>Malaysia Technology Expo 2019 PWTC, Kuala Lumpur</h4>
+                     <span><strong>1.</strong> {{ Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $tt[24]->datepost)->format('F d, Y') }}</span>
+                     <h4>{{ $tt[24]->title }}</h4>
                   </div>
                   <div class="work-img pop" style="height: 280px;">
-                     <img src="images/mte.jpg" class="img-fluid " alt="...">
+                     <img src="{{ asset('images/' . $tt[24]->image) }}" class="img-fluid " alt="...">
                   </div>
                   <div class="work-content">
-                     <p class="lead">Gold Award for The Castro Project in Malaysian Technology Expo 2019 competition at PWTC, Kuala Lumpur.</p>
+                     <p class="lead">{{ str_limit($tt[24]->desc, $limit = 150, $end = '...') }}</p>
+                     <a href="/activity/{{ $tt[24]->id }}" class="btn btn-link lead">Read More -></a>
                   </div>
                </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12 d-flex pb-3 wow slideInRight" data-wow-duration="2s">
                <div class="work-box bg-transparent">
                   <div class="work-content">
-                     <span><strong>2.</strong> JANUARY 2019 </span>
-                     <h4>Advance Web Hacking & Defense</h4>
+                     <span><strong>2.</strong> {{ Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $tt[11]->datepost)->format('F d, Y') }}</span>
+                     <h4>{{ $tt[11]->title }}</h4>
                   </div>
                   <div class="work-img pop" style="height: 280px;">
-                     <img src="images/webhacking.jpg" class="img-fluid " alt="...">
+                     <img src="{{ asset('images/' . $tt[11]->image) }}" class="img-fluid " alt="...">
                   </div>
                   <div class="work-content">
-                     <p class="lead">Join the program Advance Web Hacking & Defense to becoming a web pentester in Politeknik Mersing Johor under the program Cyber Range Politeknik Mersing, Johor.</p>
+                     <p class="lead">{{ str_limit($tt[11]->desc, $limit = 150, $end = '...') }}</p>
+                     <a href="/activity/{{ $tt[11]->id }}" class="btn btn-link lead">Read More -></a>
                   </div>
                </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12 d-flex pb-3 wow slideInLeft" data-wow-duration="2s">
                <div class="work-box bg-transparent">
                   <div class="work-content">
-                     <span><strong>2.</strong> DECEMBER 2018 <span data-feather='award'></span></span>
-                     <h4>e-REKA 2018</h4>
+                     <span><strong>3.</strong> {{ Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $tt[21]->datepost)->format('F d, Y') }}<span data-feather='award'></span></span>
+                     <h4>{{ $tt[21]->title }}</h4>
                   </div>
                   <div class="work-img pop" style="height: 280px;">
-                     <img src="images/ereka.jpg" class="img-fluid " alt="...">
+                     <img src="{{ asset('images/' . $tt[21]->image) }}" class="img-fluid " alt="...">
                   </div>
                   <div class="work-content">
-                     <p class="lead">Gold Award for The Castro System in e-REKA 2018 competition category ICT & Multimedia/Art,Design & Creativity at University Malaysia Perlis(UniMAP), Perlis.</p>
+                     <p class="lead">{{ str_limit($tt[21]->desc, $limit = 150, $end = '...') }}</p>
+                     <a href="/activity/{{ $tt[21]->id }}" class="btn btn-link lead">Read More -></a>
                   </div>
                </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12 d-flex pb-3 wow slideInRight" data-wow-duration="2s">
                <div class="work-box bg-transparent">
                   <div class="work-content">
-                     <span><strong>3.</strong> DECEMBER 2018 <span data-feather='award'></span></span>
-                     <h4>e-REKA 2018</h4>
+                     <span><strong>4.</strong> {{ Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $tt[22]->datepost)->format('F d, Y') }}<span data-feather='award'></span></span>
+                     <h4>{{ $tt[22]->title }}</h4>
                   </div>
                   <div class="work-img pop" style="height: 280px;">
-                     <img src="images/BGHU1329.JPG" class="img-fluid " alt="...">
+                     <img src="{{ asset('images/' . $tt[22]->image) }}" class="img-fluid " alt="...">
                   </div>
                   <div class="work-content">
-                     <p class="lead">Gold Award for e-FMs System in e-REKA 2018 competition category ICT & Multimedia/Art,Design & Creativity at University Malaysia Perlis(UniMAP), Perlis.</p>
+                     <p class="lead">{{ str_limit($tt[22]->desc, $limit = 150, $end = '...') }}</p>
+                     <a href="/activity/{{ $tt[22]->id }}" class="btn btn-link lead">Read More -></a>
                   </div>
                </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12 d-flex pb-3 wow slideInLeft" data-wow-duration="2s">
                <div class="work-box bg-transparent">
                   <div class="work-content">
-                     <span><strong>4.</strong> OKTOBER 2018 <span data-feather='award'></span></span>
-                     <h4>INNOVATE JOHOR 2018</h4>
+                     <span><strong>5.</strong> {{ Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $tt[2]->datepost)->format('F d, Y') }}<span data-feather='award'></span></span>
+                     <h4>{{ $tt[2]->title }}</h4>
                   </div>
                   <div class="work-img pop" style="height: 280px;">
-                     <img src="images/BJVH8799.JPG" class="img-fluid " alt="...">
+                     <img src="{{ asset('images/' . $tt[2]->image) }}" class="img-fluid " alt="...">
                   </div>
                   <div class="work-content">
-                     <p class="lead">1st place for iKeyBoxs System in INATEX 2018 competition category IPT/Kolej Komuniti at University Technology Malaysia, Skudai.</p>
+                     <p class="lead">{{ str_limit($tt[2]->desc, $limit = 150, $end = '...') }}</p>
+                     <a href="/activity/{{ $tt[2]->id }}" class="btn btn-link lead">Read More -></a>
+                  </div>
+               </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6 col-sm-12 d-flex pb-3 wow slideInRight" data-wow-duration="2s">
+               <div class="work-box bg-transparent">
+                  <div class="work-content">
+                     <span><strong>6.</strong> {{ Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $tt[8]->datepost)->format('F d, Y') }}<span data-feather='award'></span></span>
+                     <h4>{{ $tt[8]->title }}</h4>
+                  </div>
+                  <div class="work-img pop" style="height: 280px;">
+                     <img src="{{ asset('images/' . $tt[8]->image) }}" class="img-fluid " alt="...">
+                  </div>
+                  <div class="work-content">
+                     <p class="lead">{{ str_limit($tt[8]->desc, $limit = 150, $end = '...') }}</p>
+                     <a href="/activity/{{ $tt[8]->id }}" class="btn btn-link lead">Read More -></a>
+                  </div>
+               </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 d-flex pb-3 wow slideInLeft" data-wow-duration="2s">
+               <div class="work-box bg-transparent">
+                  <div class="work-content">
+                     <span><strong>7.</strong> {{ Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $tt[5]->datepost)->format('F d, Y') }}</span>
+                     <h4>{{ $tt[5]->title }}</h4>
+                  </div>
+                  <div class="work-img pop" style="height: 280px;">
+                     <img src="{{ asset('images/' . $tt[5]->image) }}" class="img-fluid " alt="...">
+                  </div>
+                  <div class="work-content">
+                     <p class="lead">{{ str_limit($tt[5]->desc, $limit = 150, $end = '...') }}</p>
+                     <a href="/activity/{{ $tt[5]->id }}" class="btn btn-link lead">Read More -></a>
                   </div>
                </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12 d-flex pb-3 wow slideInRight" data-wow-duration="2s">
                <div class="work-box bg-transparent">
                   <div class="work-content">
-                     <span><strong>5.</strong> OKTOBER 2018</span>
-                     <h4>LIGA ILMU SERANTAU 2018 (INDONESIA)</h4>
+                     <span><strong>8.</strong> {{ Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $tt[23]->datepost)->format('F d, Y') }}<span data-feather='award'></span></span>
+                     <h4>{{ $tt[23]->title }}</h4>
                   </div>
                   <div class="work-img pop" style="height: 280px;">
-                     <img src="images/BGBM7181.JPG" class="img-fluid " alt="...">
+                     <img src="{{ asset('images/' . $tt[23]->image) }}" class="img-fluid " alt="...">
                   </div>
                   <div class="work-content">
-                     <p class="lead">Join Expo for eFMs System at Polytechnic Jambi, Indonesia under Polytechnic Mersing, Johor.</p>
+                     <p class="lead">{{ str_limit($tt[23]->desc, $limit = 150, $end = '...') }}</p>
+                     <a href="/activity/{{ $tt[23]->id }}" class="btn btn-link lead">Read More -></a>
                   </div>
                </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12 d-flex pb-3 wow slideInLeft" data-wow-duration="2s">
                <div class="work-box bg-transparent">
                   <div class="work-content">
-                     <span><strong>6.</strong> AUGUST 2018 <span data-feather='award'></span></span>
-                     <h4>SPIKK 2018</h4>
+                     <span><strong>9.</strong> {{ Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $tt[19]->datepost)->format('F d, Y') }}<span data-feather='award'></span></span>
+                     <h4>{{ $tt[19]->title }}</h4>
                   </div>
                   <div class="work-img pop" style="height: 280px;">
-                     <img src="images/IMG_9750.JPG" class="img-fluid " alt="...">
+                     <img src="{{ asset('images/' . $tt[19]->image) }}" class="img-fluid " alt="...">
                   </div>
                   <div class="work-content">
-                     <p class="lead">Bronze medal for i‐Meet System in SPIKK 2018 competition under Kolej Komuniti at Kolej Komuniti Jelebu, Negeri Sembilan.</p>
+                     <p class="lead">{{ str_limit($tt[19]->desc, $limit = 150, $end = '...') }}</p>
+                     <a href="/activity/{{ $tt[19]->id }}" class="btn btn-link lead">Read More -></a>
                   </div>
                </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12 d-flex pb-3 wow slideInRight" data-wow-duration="2s">
                <div class="work-box bg-transparent">
                   <div class="work-content">
-                     <span><strong>7.</strong> JULY 2018 <span data-feather='award'></span></span>
-                     <h4>PNiCC’18</h4>
+                     <span><strong>10.</strong> {{ Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $tt[20]->datepost)->format('F d, Y') }}<span data-feather='award'></span></span>
+                     <h4>{{ $tt[20]->title }}</h4>
                   </div>
                   <div class="work-img pop" style="height: 280px;">
-                     <img src="images/MTEX8197.JPG" class="img-fluid " alt="...">
+                     <img src="{{ asset('images/' . $tt[20]->image) }}" class="img-fluid " alt="...">
                   </div>
                   <div class="work-content">
-                     <p class="lead">3rd place Best Project and Gold Medal for eFMs System in @PMJB National Innovation & Creativity Competition 2018 (PNiCC’18) competition at UTC Johor, GALLERIA@KOTARAYA.</p>
+                     <p class="lead">{{ str_limit($tt[20]->desc, $limit = 150, $end = '...') }}</p>
+                     <a href="/activity/{{ $tt[20]->id }}" class="btn btn-link lead">Read More -></a>
                   </div>
                </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12 d-flex pb-3 wow slideInLeft" data-wow-duration="2s">
                <div class="work-box bg-transparent">
                   <div class="work-content">
-                     <span><strong>8.</strong> JULY 2018 <span data-feather='award'></span></span>
-                     <h4>PNiCC’18</h4>
+                     <span><strong>11.</strong> {{ Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $tt[18]->datepost)->format('F d, Y') }}<span data-feather='award'></span></span>
+                     <h4>{{ $tt[18]->title }}</h4>
                   </div>
                   <div class="work-img pop" style="height: 280px;">
-                     <img src="images/XGRK4395.JPG" class="img-fluid " alt="...">
+                     <img src="{{ asset('images/' . $tt[18]->image) }}" class="img-fluid " alt="...">
                   </div>
                   <div class="work-content">
-                     <p class="lead">Gold Medal for TheCastro System in @PMJB National Innovation & Creativity Competition 2018 (PNiCC’18) competition at UTC Johor, GALLERIA@KOTARAYA.</p>
+                     <p class="lead">{{ str_limit($tt[18]->desc, $limit = 150, $end = '...') }}</p>
+                     <a href="/activity/{{ $tt[18]->id }}" class="btn btn-link lead">Read More -></a>
                   </div>
                </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12 d-flex pb-3 wow slideInRight" data-wow-duration="2s">
                <div class="work-box bg-transparent">
                   <div class="work-content">
-                     <span><strong>9.</strong> MAY 2018 <span data-feather='award'></span></span>
-                     <h4>11TH FIRA MALAYSIA CUP</h4>
+                     <span><strong>12.</strong> {{ Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $tt[16]->datepost)->format('F d, Y') }}<span data-feather='award'></span></span>
+                     <h4>{{ $tt[16]->title }}</h4>
                   </div>
                   <div class="work-img pop" style="height: 280px;">
-                     <img src="images/LNXD3751.JPG" class="img-fluid " alt="...">
+                     <img src="{{ asset('images/' . $tt[16]->image) }}" class="img-fluid " alt="...">
                   </div>
                   <div class="work-content">
-                     <p class="lead">2nd runner for competition 11th FIRA MALAYSIA CUP category MyBOT(Bridge2.0) at Polytechnic Mersing, Johor</p>
+                     <p class="lead">{{ str_limit($tt[16]->desc, $limit = 150, $end = '...') }}</p>
+                     <a href="/activity/{{ $tt[16]->id }}" class="btn btn-link lead">Read More -></a>
                   </div>
                </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12 d-flex pb-3 wow slideInLeft" data-wow-duration="2s">
                <div class="work-box bg-transparent">
                   <div class="work-content">
-                     <span><strong>10.</strong> MARCH 2018 <span data-feather='award'></span></span>
-                     <h4>SPEK 2018</h4>
+                     <span><strong>13.</strong> {{ Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $tt[17]->datepost)->format('F d, Y') }}<span data-feather='award'></span></span>
+                     <h4>{{ $tt[17]->title }}</h4>
                   </div>
                   <div class="work-img pop" style="height: 280px;">
-                     <img src="images/spek.JPG" class="img-fluid " alt="...">
+                     <img src="{{ asset('images/' . $tt[17]->image) }}" class="img-fluid " alt="...">
                   </div>
                   <div class="work-content">
-                     <p class="lead">Gold Medal for competition Student’s Projects Exchibitions at Polytechnic Mersing, Johor.</p>
+                     <p class="lead">{{ str_limit($tt[17]->desc, $limit = 150, $end = '...') }}</p>
+                     <a href="/activity/{{ $tt[17]->id }}" class="btn btn-link lead">Read More -></a>
                   </div>
                </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12 d-flex pb-3 wow slideInRight" data-wow-duration="2s">
                <div class="work-box bg-transparent">
                   <div class="work-content">
-                     <span><strong>11.</strong> MARCH 2018 <span data-feather='award'></span></span>
-                     <h4>PIEX 2018</h4>
+                     <span><strong>14.</strong> {{ Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $tt[14]->datepost)->format('F d, Y') }}<span data-feather='award'></span></span>
+                     <h4>{{ $tt[14]->title }}</h4>
                   </div>
                   <div class="work-img pop" style="height: 280px;">
-                     <img src="images/WSKS7613.JPG" class="img-fluid " alt="...">
+                     <img src="{{ asset('images/' . $tt[14]->image) }}" class="img-fluid " alt="...">
                   </div>
                   <div class="work-content">
-                     <p class="lead">1st place Best Project & Gold Medal for competition Project Exhibition Version 3.0 (PIEX) under Department of Information Technology & Communication at Polytechnic Mersing, Johor.</p>
+                     <p class="lead">{{ str_limit($tt[14]->desc, $limit = 150, $end = '...') }}</p>
+                     <a href="/activity/{{ $tt[14]->id }}" class="btn btn-link lead">Read More -></a>
                   </div>
                </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12 d-flex pb-3 wow slideInLeft" data-wow-duration="2s">
                <div class="work-box bg-transparent">
                   <div class="work-content">
-                     <span><strong>12.</strong> SEPTEMBER 2017 <span data-feather='award'></span></span>
-                     <h4>POLYSKILLS 2017</h4>
+                     <span><strong>15.</strong> {{ Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $tt[13]->datepost)->format('F d, Y') }}<span data-feather='award'></span></span>
+                     <h4>{{ $tt[13]->title }}</h4>
                   </div>
                   <div class="work-img pop" style="height: 280px;">
-                     <img src="images/IMG_4417.JPG" class="img-fluid " alt="...">
+                     <img src="{{ asset('images/' . $tt[13]->image) }}" class="img-fluid " alt="...">
                   </div>
                   <div class="work-content">
-                     <p class="lead">1st place for web design competition under Polytechnic Malaysia at Polytechnic Tuanku Syed Sirajuddin, Perlis.</p>
+                     <p class="lead">{{ str_limit($tt[13]->desc, $limit = 150, $end = '...') }}</p>
+                     <a href="/activity/{{ $tt[13]->id }}" class="btn btn-link lead">Read More -></a>
                   </div>
                </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12 d-flex pb-3 wow slideInRight" data-wow-duration="2s">
                <div class="work-box bg-transparent">
                   <div class="work-content">
-                     <span><strong>13.</strong> AUGUST 2017 <span data-feather='award'></span></span>
-                     <h4>CODE HUNT 2017</h4>
+                     <span><strong>16.</strong> {{ Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $tt[15]->datepost)->format('F d, Y') }}<span data-feather='award'></span></span>
+                     <h4>{{ $tt[15]->title }}</h4>
                   </div>
                   <div class="work-img pop" style="height: 280px;">
-                     <img src="images/IMG_3609.JPG" class="img-fluid " alt="...">
+                     <img src="{{ asset('images/' . $tt[15]->image) }}" class="img-fluid " alt="...">
                   </div>
                   <div class="work-content">
-                     <p class="lead">2nd place for Code Hunt competition category Java & C++ under Polytechnic Malaysia at Polytechnic Balik Pulau, Pulau Pinang.</p>
-                  </div>
-               </div>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-12 d-flex pb-3 wow slideInLeft" data-wow-duration="2s">
-               <div class="work-box bg-transparent">
-                  <div class="work-content">
-                     <span><strong>14.</strong> JUN 2015 <span data-feather='award'></span></span>
-                     <h4>MYCCSKILLS 2015</h4>
-                  </div>
-                  <div class="work-img pop" style="height: 280px;">
-                     <img src="images/IMG_5323.JPG" class="img-fluid " alt="...">
-                  </div>
-                  <div class="work-content">
-                     <p class="lead">2nd place for MyCcSkills competition category web design under Kolej Komuniti at Kolej Komuniti Kuala Langat, Selangor.</p>
+                     <p class="lead">{{ str_limit($tt[15]->desc, $limit = 150, $end = '...') }}</p>
+                     <a href="/activity/{{ $tt[15]->id }}" class="btn btn-link lead">Read More -></a>
                   </div>
                </div>
             </div>

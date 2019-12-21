@@ -2,8 +2,9 @@
    <meta charset="utf-8">
    <title>MNHAZIM</title>
    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-   <meta content="" name="keywords">
-   <meta content="" name="description">
+   <meta name="description" content="Hello, This is my personal Website for sharing my portfolio, knowledge and activity. First customize website using laravel framework, bootstrap 4 and wowjs for animation">
+   <meta name="author" content="mnhazim mnhazim.com">
+   <meta name="keywords" content="hazimesa mnhazim.com mnhazim personal website resume online">
    <!-- Favicons -->
    <link href="{{ asset('images/icon/i_logoH.png') }}" rel="icon">
    <!-- Bootstrap CSS File -->

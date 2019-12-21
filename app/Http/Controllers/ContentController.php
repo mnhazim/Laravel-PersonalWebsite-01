@@ -8,11 +8,23 @@ use Illuminate\Support\Facades\DB;
 use App\mnh_lookup_var;
 use App\mnh_post;
 use App\mnh_form;
+use App\Mnh_owner;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Validator;
+use Redirect;
+use App\Mail\SendMail;
 
 class ContentController extends Controller
 {
+
     public function index(){
+        $getPost = Mnh_owner::findorfail(1);
+        if($getPost){
+            $getPost->visitor = $getPost->visitor+ 1;
+            $getPost->save();
+        }    
+
         $extlink = DB::table('mnh_lookup_var')->where('id_mst', 2)->get();
         $quote = DB::table('mnh_quotes')->where('status', 1)->get();
         $owner = DB::table('mnh_owner')->first();
@@ -45,13 +57,15 @@ class ContentController extends Controller
                         ->leftJoin('mnh_post as b', 'a.id', '=', 'b.id_var')
                         ->whereIn('a.id', array(4,5,6,7,8))
                         ->groupBy('a.id')
-                        ->get();
+                        ->get();  
 
         return view('public_content.index', compact('quote' , 'owner', 'activity', 'sharings', 'portfolios', 'extlink', 'categories'));
     }
 
     public function about(){
-        return view ('public_content.about');
+
+        $tt = mnh_post::all();
+        return view ('public_content.about', compact('tt'));
     }
 
     public function history(){
@@ -77,6 +91,10 @@ class ContentController extends Controller
 
     public function postCategory($code, $id){
         $getPost = mnh_post::findorfail($id);
+        if($getPost){
+            $getPost->visitor = $getPost->visitor+ 1;
+            $getPost->save();
+        }
         $detailCategory = mnh_lookup_var::where('code', $code)->firstOrFail();
         $randomCat  = $this->getRanCategory(3,array(4,5,6,7,8));
         $topHit     = $this->getTopHit($detailCategory->id, 2);
@@ -153,10 +171,12 @@ class ContentController extends Controller
                 ->select(DB::raw('a.*, b.title as typepost, b.code as code'))
                 ->leftJoin('mnh_lookup_var as b', 'a.id_var' , 'b.id')
                 ->whereIn('a.id_var', $idmst)
+                ->limit($limit)
                 ->get();
 
         if (!$data->isEmpty()) {
-            return $data->random($limit);
+            //return $data->random($limit);
+            return $data;
         } else {
             return 0;
         }
@@ -192,14 +212,18 @@ class ContentController extends Controller
 
     }
 
-    public function formSubmit(){
+    public function formSubmit(Request $request){
 
-        request()->validate([
+        $validator = Validator::make($request->all(), [
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|min:10',
             'desc' => 'required|string|max:180|min:10',
             'captcha' => 'required|captcha'
         ]);
+
+        if ($validator->fails()) {
+            return Redirect::to('/#form')->withErrors($validator);
+        }
 
         $form = new mnh_form;
         $form->name = Request('name');
@@ -208,8 +232,17 @@ class ContentController extends Controller
         $form->urgent = (Request('urgent') == '') ? 0 : 1 ;
         $form->save();
 
+        if($form){
+            $data = array(
+                'name' => Request('name'),
+                'urgent' => (Request('urgent') == '') ? 'No' : 'Yes',
+                'message' => Request('desc')
+            );
+            Mail::to(Request('email'))->send(new SendMail($data));
+        }
+
         Session::flash('message', "Thank you, I will response within 3 working days. ok?");
-        return back();
+        return redirect(route('home') . '#form');
         
     }
 

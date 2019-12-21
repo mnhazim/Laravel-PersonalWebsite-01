@@ -66,7 +66,64 @@
                   <img class="d-block mt-3 w-100" src="{{ asset('images/bg1.jpg') }}" alt="" width="100%">
                   <p class="mt-1 "><small>Post Desc</small></p>
                   <!-- Content Post --> 
-                  Post Content
+                  <h5>1) PENGENALAN</h5>
+                  <p class="lead">
+                     <strong>Android P01</strong> adalah projek Arduino yang dibangunkan untuk <strong>mengesan kelembapan dan suhu udara</strong> dengan menggunakan <strong>sensor dht22</strong>. Projek ini <strong>berintegrasi</strong> dengan sistem yang dibangunkan sendiri dengan menggunakan bahasa pengaturcaraan PHP. Data yang dihantar melalui <strong>Get Method Request</strong> akan disimpan dalam database dan akan dipaparkan pada sistem setiap dua saat melalui <strong>Ajax Method</strong>.
+                  </p>
+                  <h5>2) ARKITEKTUR SISTEM</h5>
+                  <h6>2.1: PLATFORM WEB</h6>
+                  <p class="lead">Sistem ini dibangunkan dengan menggunakan Bahasa Pengaturcaraan PHP. Sistem ini menggunakan konsep Object Oriented Programming (OOP).</p>
+                  <strong>System</strong>: -<br>
+                  <ul>
+                     <li>Programming Language: PHP 7.2</li>
+                     <li>Database Support: MYSQL</li>
+                     <li>UI: Bootstraps</li>
+                     <li>TEMPLATE: Creative Tim (Argon Dashboard)</li>
+                     <li>Mobile Mode: YES</li>
+                     <li>Customization: YES.</li>
+                  </ul>
+                  <strong>Hardware</strong>: -<br>
+                  <ul>
+                     <li>Breadboard</li>
+                     <li>Jumper wire</li>
+                     <li>DHT22 (Humidity & temperature Sensor)</li>
+                     <li>ESP32 (Main Board)</li>
+                     <li>Arduino IDE</li>
+                     <li>Programming Language: C</li>
+                  </ul>
+                  <h6>2.2: PANGKALAN DATA</h6>
+                  <p>Pangkalan data yang dibangunkan akan menggunakan pangkalan data MySQL. MySQL adalah perisian sumber terbuka tanpa melibatkan kos tambahan Perisian. Berikut adalah ciri-ciri dan arkitektur pangkalan data MySQL:
+                     <br>
+                  <ul>
+                     <li>Relational Database Management System (RDBMS)</li>
+                     <li>Mudah untuk digunakan dan dikendalikan</li>
+                     <li>Selamat untuk digunakan</li>
+                     <li>Client/ Server Architecture</li>
+                     <li>Muat turun secara percuma</li>
+                     <li>Berskala</li>
+                     <li>Serasi pada kebanyakan operating systems</li>
+                     <li>Membolehkan transaksi roll-back</li>
+                     <li>Prestasi tinggi</li>
+                     <li>Fleksibiliti tinggi</li>
+                     <li>Produktiviti tinggi</li>
+                  </ul>
+                  </p>
+                  <h5>3) PAPARAN ANTARAMUKA</h5>
+                  <div class="row">
+                     <div class="col-lg-12 col-md-12 col-sm-12 p-2">
+                        <img src="../../images/1576303813.jpg" width="100%">
+                     </div>
+                     <div class="col-lg-12 col-md-12 col-sm-12 p-2">
+                        <img src="../../images/1576303829.jpg" width="100%">
+                     </div>
+                     <div class="col-lg-12 col-md-12 col-sm-12 p-2">
+                        <img src="../../images/1576303857.jpg" width="100%">
+                     </div>
+                     <div class="col-lg-12 col-md-12 col-sm-12 p-2">
+                        <iframe width="100%" height="500" src="https://www.youtube.com/embed/QktM1K5spjM">
+</iframe>
+                     </div>
+                  </div>
                   <!-- End Content Post -->
                   <div class="row mt-5 fs-1 align-items-center">
                      <div class="col-auto">
@@ -100,21 +157,23 @@
                   <h5 class="mt-5">Popular</h5>
                   <div class="wow slideInRight " data-wow-duration="2s">
                      <a href="">
-                     <img class="mt-3 radius-primary" src="{{ asset('images/bg1.jpg') }}" width="100%" alt="">
-                     <h6 class="fs-0 mt-3">Title</h6>
-                  </a>
-                  </div><div class="wow slideInRight " data-wow-duration="2s">
+                        <img class="mt-3 radius-primary" src="{{ asset('images/bg1.jpg') }}" width="100%" alt="">
+                        <h6 class="fs-0 mt-3">Title</h6>
+                     </a>
+                  </div>
+                  <div class="wow slideInRight " data-wow-duration="2s">
                      <a href="">
-                     <img class="mt-3 radius-primary" src="{{ asset('images/bg1.jpg') }}" width="100%" alt="">
-                     <h6 class="fs-0 mt-3">Title</h6>
-                  </a>
+                        <img class="mt-3 radius-primary" src="{{ asset('images/bg1.jpg') }}" width="100%" alt="">
+                        <h6 class="fs-0 mt-3">Title</h6>
+                     </a>
                   </div>
                   <div class="mt-6">
                      <h5>Categories</h5>
                      <ul class="nav tags mt-3 fs--1">
-                         <li  class="wow slideInUp " data-wow-duration="2s">
+                        <li  class="wow slideInUp " data-wow-duration="2s">
                            <a class="btn btn-sm btn-outline-secondary m-1" href="">DUMMY</a>
-                        </li><li  class="wow slideInUp " data-wow-duration="2s">
+                        </li>
+                        <li  class="wow slideInUp " data-wow-duration="2s">
                            <a class="btn btn-sm btn-outline-secondary m-1" href="">DUMMY</a>
                         </li>
                      </ul>

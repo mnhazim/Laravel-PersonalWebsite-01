@@ -20,7 +20,7 @@
 </style>
 <section class="py-0" id="header-split-static">
    <div class="container-fluid wow">
-      <div class="row" style="height: 75vh">
+      <div class="row" style="height: 50vh">
          <div class="col-lg-6 px-0 order-lg-2 wow slideInRight " data-wow-duration="2s">
             <div class="background-holder" style="background-image: url(/../images/{{ $detailCategory->image }}); filter: blur(0px); opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);" > </div>
          </div>
@@ -63,10 +63,10 @@
                      </div>
                   </div>
                   <h4 class="mt-2">{{ $getPost->title }}</h4>
-                  <img class="d-block mt-3 w-100" src="{{ asset('images/bg1.jpg') }}" alt="" width="100%">
-                  <p class="mt-1 "><small>{{ $getPost->desc }}</small></p>
+                  <img class="d-block mt-3 w-100" src="{{ asset('images/' . $getPost->image) }}" alt="" width="100%">
+                  <p>{{ Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $getPost->datepost)->format('M d, Y h:i a') }} | <span data-feather='eye' style="width: 16px;"></span><small>&nbsp;{{ $getPost->visitor != 0 ? $getPost->visitor : '0' }}</small></p>
                   <!-- Content Post --> 
-                  {{ $getPost->content }}
+                  {!! $getPost->content !!}
                   <!-- End Content Post -->
                   <div class="row mt-5 fs-1 align-items-center">
                      <div class="col-auto">
