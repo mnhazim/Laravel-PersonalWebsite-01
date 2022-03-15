@@ -17,6 +17,7 @@ use App\Mail\SendMail;
 
 class ContentController extends Controller
 {
+    //Testing update release
 
     public function index(){
         $getPost = Mnh_owner::findorfail(1);
